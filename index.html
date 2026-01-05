@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suzanne Băile Figa • Cazare</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header" id="top">
+      <div class="container header__inner">
+        <a class="brand" href="#top" aria-label="Suzanne Băile Figa - Home">
+          <span class="brand__mark">S</span>
+          <span class="brand__text">
+            <span class="brand__name">Suzanne</span>
+            <span class="brand__sub">Băile Figa</span>
+          </span>
+        </a>
+
+        <button class="nav__toggle" id="navToggle" aria-label="Deschide meniul" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="nav" id="nav">
+          <a class="nav__link is-active" href="#top">Home</a>
+          <a class="nav__link" href="#cazare">Cazare</a>
+          <a class="nav__link" href="#facilitati">Facilități</a>
+          <a class="nav__link" href="#locatie">Locație</a>
+          <a class="nav__link" href="#galerie">Galerie</a>
+          <a class="nav__link" href="#contact">Contact</a>
+          <a class="nav__cta" href="#contact">Rezervă acum</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" aria-label="Hero">
+        <div class="hero__bg hero__bg--a" id="heroBgA"></div>
+        <div class="hero__bg hero__bg--b" id="heroBgB"></div>
+        <div class="hero__overlay"></div>
+
+        <div class="container hero__content">
+          <p class="hero__kicker">Cazare la 20 m de stațiunea Băile Figa</p>
+          <h1 class="hero__title">AICI ÎNCEPE RELAXAREA</h1>
+          <p class="hero__subtitle">
+            Cabana Mare • Căsuțe • Camere tip hotel — confort, panoramă și liniște, aproape de tot ce contează.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#cazare">Vezi cazările</a>
+            <a class="btn btn--ghost" href="#locatie">Vezi locația</a>
+          </div>
+
+          <div class="hero__meta">
+            <div class="pill">Wi-Fi</div>
+            <div class="pill">Parcare</div>
+            <div class="pill">Aer condiționat</div>
+            <div class="pill">Terasă 200 mp</div>
+            <div class="pill">2 ciubere (opțional)</div>
+          </div>
+
+          <div class="hero__dots" id="heroDots" aria-label="Slide indicator"></div>
+        </div>
+      </section>
+
+      <!-- CAZARE -->
+      <section class="section" id="cazare">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title">Variante de cazare</h2>
+            <p class="section__desc">
+              Alege ce ți se potrivește: cabană mare pentru grup, căsuțe pentru familie sau camere tip hotel.
+            </p>
+          </div>
+
+          <div class="grid cards">
+            <article class="card">
+              <div class="card__media" data-img="cabanamare1"></div>
+              <div class="card__body">
+                <h3 class="card__title">Cabana Mare Suzanne</h3>
+                <p class="card__text">
+                  3 dormitoare, living, bucătărie open space, 3 băi, terasă comună 200 mp, barbeque, pavilioane, șezlonguri.
+                </p>
+                <ul class="card__list">
+                  <li>3 dormitoare + living</li>
+                  <li>3 băi • 3 frigidere • 3 TV</li>
+                  <li>Balcoane + panoramă (etaj)</li>
+                </ul>
+                <a class="card__cta" href="#contact">Vizualizează cazarea</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__media" data-img="terasa"></div>
+              <div class="card__body">
+                <h3 class="card__title">Căsuțe Suzanne</h3>
+                <p class="card__text">
+                  Unități cu baie proprie, duș, climatizare, TV, frigider, zonă de relaxare și zonă de luat masa.
+                </p>
+                <ul class="card__list">
+                  <li>Aer condiționat</li>
+                  <li>Terasă + loc de joacă</li>
+                  <li>Hiking & ciclism în apropiere</li>
+                </ul>
+                <a class="card__cta" href="#contact">Vizualizează cazarea</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__media" data-img="camerade4"></div>
+              <div class="card__body">
+                <h3 class="card__title">Camere tip hotel</h3>
+                <p class="card__text">
+                  Camere (16 mp) în aceeași locație: baie proprie, pat matrimonial, TV, frigider, încălzire centrală, Wi-Fi.
+                </p>
+                <ul class="card__list">
+                  <li>16 mp</li>
+                  <li>Baie proprie</li>
+                  <li>Wi-Fi • încălzire centrală</li>
+                </ul>
+                <a class="card__cta" href="#contact">Vizualizează cazarea</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FACILITATI -->
+      <section class="section section--alt" id="facilitati">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title">Facilități esențiale</h2>
+            <p class="section__desc">Tot ce trebuie pentru un sejur lejer, cu vibe de stațiune.</p>
+          </div>
+
+          <div class="grid features">
+            <div class="feature">
+              <div class="feature__icon">🔥</div>
+              <h3 class="feature__title">Barbeque & ceaun</h3>
+              <p class="feature__text">Grătar, ceaun și mini bucătărie pe terasă.</p>
+            </div>
+            <div class="feature">
+              <div class="feature__icon">🛁</div>
+              <h3 class="feature__title">2 ciubere încălzite</h3>
+              <p class="feature__text">Capacitate 6–8 persoane (cost suplimentar).</p>
+            </div>
+            <div class="feature">
+              <div class="feature__icon">🌿</div>
+              <h3 class="feature__title">Terasă 200 mp</h3>
+              <p class="feature__text">Panoramă frumoasă asupra stațiunii.</p>
+            </div>
+            <div class="feature">
+              <div class="feature__icon">🅿️</div>
+              <h3 class="feature__title">Parcare privată</h3>
+              <p class="feature__text">Loc de parcare la locație.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LOCATIE -->
+      <section class="section" id="locatie">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title">Locație & acces</h2>
+            <p class="section__desc">
+              Aleea Băile Figa - Aleea 1 Lot 11, 425100 Figa, România
+            </p>
+          </div>
+
+         <div class="location__map">
+  <!-- Click pe hartă -> deschide locația în Google Maps -->
+  <a
+    class="map__link"
+    href="https://www.google.com/maps/search/?api=1&query=Aleea%20B%C4%83ile%20Figa%20-%20Aleea%201%20Lot%2011%2C%20425100%20Figa%2C%20Rom%C3%A2nia"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Deschide locația Cabana Suzanne în Google Maps"
+  >
+    <!-- Google Maps Embed (vizual) -->
+    <iframe
+      class="map__iframe"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps?q=Aleea%20B%C4%83ile%20Figa%20-%20Aleea%201%20Lot%2011%2C%20425100%20Figa%2C%20Rom%C3%A2nia&output=embed"
+      title="Cabana Suzanne - Google Maps"
+    ></iframe>
+
+    <!-- Overlay mic de hint -->
+    <div class="map__hint">
+      Apasă pe hartă pentru a deschide locația în Google Maps
+    </div>
+  </a>
+</div>
+
+
+            <div class="location__info">
+              <div class="location__box">
+                <h3>În apropiere (pe jos)</h3>
+                <ul class="location__list">
+                  <li><strong>20 m</strong> • Stațiunea Băile Figa</li>
+                  <li><strong>50 m</strong> • Stație de autobuz</li>
+                </ul>
+              </div>
+
+              <div class="location__box">
+                <h3>Alte informații utile</h3>
+                <ul class="location__list">
+                  <li><strong>1.5 km</strong> • Gară</li>
+                  <li><strong>2 km</strong> • Stație autobuz interurban</li>
+                  <li><strong>2 km</strong> • Încărcare mașini electrice</li>
+                  <li><strong>3.9 km</strong> • Centrul orașului</li>
+                  <li><strong>73 km</strong> • Aeroport Cluj (Avram Iancu)</li>
+                </ul>
+              </div>
+
+              <div class="location__actions">
+                <a class="btn btn--primary" href="#contact">Rezervă / Întreabă</a>
+                <a class="btn btn--ghost" href="#galerie">Vezi poze</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALERIE -->
+      <section class="section section--alt" id="galerie">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title">Galerie</h2>
+            <p class="section__desc">Poze reale din locație (din folderul tău).</p>
+          </div>
+
+          <div class="grid gallery">
+            <div class="gallery__item" data-img="livingcabana"></div>
+            <div class="gallery__item" data-img="dormitorcabanamare"></div>
+            <div class="gallery__item" data-img="baiecabana1"></div>
+            <div class="gallery__item" data-img="bbq"></div>
+
+            <div class="gallery__item" data-img="livingpensiune"></div>
+            <div class="gallery__item" data-img="dormitorpensiune2"></div>
+            <div class="gallery__item" data-img="baiepensiune2"></div>
+            <div class="gallery__item" data-img="pozaciubar"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="contact">
+            <div class="contact__left">
+              <h2 class="section__title">Contact & rezervări</h2>
+              <p class="section__desc">
+                Spune perioada și tipul de cazare. Îți răspundem rapid cu disponibilitate și preț.
+              </p>
+
+              <div class="contact__quick">
+                <div class="quick">
+                  <span class="quick__label">Telefon</span>
+                  <span class="quick__value">+40 7xx xxx xxx</span>
+                </div>
+                <div class="quick">
+                  <span class="quick__label">Email</span>
+                  <span class="quick__value">rezervari@suzanne-figa.ro</span>
+                </div>
+              </div>
+            </div>
+
+            <form class="contact__form" onsubmit="return false;">
+              <div class="form__row">
+                <label>
+                  Nume
+                  <input type="text" placeholder="Numele tău" />
+                </label>
+                <label>
+                  Telefon
+                  <input type="tel" placeholder="+40 ..." />
+                </label>
+              </div>
+
+              <div class="form__row">
+                <label>
+                  Perioadă
+                  <input type="text" placeholder="ex: 12–15 Aug" />
+                </label>
+                <label>
+                  Tip cazare
+                  <select>
+                    <option>Cabana Mare</option>
+                    <option>Căsuțe</option>
+                    <option>Camere tip hotel</option>
+                  </select>
+                </label>
+              </div>
+
+              <label>
+                Mesaj
+                <textarea rows="4" placeholder="Nr. persoane, preferințe, întrebări..."></textarea>
+              </label>
+
+              <button class="btn btn--primary btn--full" type="submit">Trimite cerere</button>
+              <p class="form__hint">* Demo (fără trimitere reală). În React conectezi la backend / WhatsApp / email.</p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p>© <span id="year"></span> Suzanne Băile Figa. Toate drepturile rezervate.</p>
+        <a class="footer__top" href="#top">Sus ↑</a>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
