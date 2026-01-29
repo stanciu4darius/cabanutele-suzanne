@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suzanne Băile Figa • Camere Hotel</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <!-- TOPBAR -->
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <div class="topbar__left">
+          <span class="topbar__label">Rezervări:</span>
+          <a class="topbar__phone" href="tel:+40748108143">0748 108 143</a>
+          <span class="topbar__sep">•</span>
+          <a class="topbar__phone" href="tel:+40755604463">0755 604 463</a>
+        </div>
+
+        <div class="topbar__right">
+          <a class="topbar__social" href="#" aria-label="Facebook">Facebook</a>
+          <a class="topbar__social" href="#" aria-label="Instagram">Instagram</a>
+          <a class="topbar__social" href="#" aria-label="TikTok">TikTok</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- HEADER -->
+    <header class="header" id="top">
+      <div class="container header__inner">
+        <a class="brand" href="./index.html" aria-label="Suzanne Băile Figa - Home">
+          <span class="brand__mark">S</span>
+          <span class="brand__text">
+            <span class="brand__name">Suzanne</span>
+            <span class="brand__sub">Băile Figa</span>
+          </span>
+        </a>
+
+        <button class="nav__toggle" id="navToggle" aria-label="Deschide meniul" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="nav" id="nav">
+          <a class="nav__link is-active" href="./camere-hotel.html">Suzanne Băile Figa • Camere Hotel</a>
+          <a class="nav__link" href="./pensiune.html">Pensiunea Suzanne Băile Figa</a>
+          <a class="nav__link" href="./camere-hotel.html">Băile Figa • Terasă Spa Cazare</a>
+          <a class="nav__link" href="./cabana.html">Cabana Suzanne Băile Figa</a>
+          <a class="nav__link" href="./casute.html">Căsuțe Suzanne Băile Figa</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO (hotel style) -->
+      <section class="pageHero" aria-label="Camere Hotel - Hero">
+        <div class="pageHero__media" data-img="camere_hotel_cover"></div>
+        <div class="pageHero__overlay"></div>
+
+        <div class="container pageHero__content">
+          <p class="pageHero__kicker">SUZANNE BĂILE FIGA • CAMERE HOTEL</p>
+          <h1 class="pageHero__title">Confort curat, atmosferă de vacanță</h1>
+          <p class="pageHero__subtitle">
+            Camere tip hotel, înomânia • toate camerele au <strong>Aer condiționat</strong>.
+            Prețurile afișate sunt pentru <strong>extrasezon</strong>.
+          </p>
+
+          <div class="pageHero__chips">
+            <span class="pill">AC în toate camerele</span>
+            <span class="pill">Wi-Fi</span>
+            <span class="pill">Baie proprie</span>
+            <span class="pill">TV + frigider</span>
+          </div>
+
+          <div class="pageHero__actions">
+            <a class="btn btn--primary" href="#camere">Vezi camerele</a>
+            <a class="btn btn--ghost" href="#contact">Contact</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ROOMS LIST (premium large blocks) -->
+      <section class="section" id="camere">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title">Camere & tarife</h2>
+            <p class="section__desc">
+              Preț extrasezon + număr de camere disponibile pe tip.
+            </p>
+          </div>
+
+          <div class="roomList">
+            <!-- Camera Deluxe -->
+            <article class="room">
+              <div class="room__media" data-img="camera_deluxe"></div>
+
+              <div class="room__body">
+                <div class="room__top">
+                  <h3 class="room__title">Camera Deluxe</h3>
+                  <div class="room__price">
+                    <span class="room__priceMain">220 lei</span>
+                    <span class="room__priceSub">/ noapte • extrasezon</span>
+                  </div>
+                </div>
+
+                <p class="room__text">
+                  Cameră tip hotel, ideală pentru un sejur lejer. Design clean, lumină bună, confort.
+                </p>
+
+                <div class="room__meta">
+                  <div class="room__badge">AC</div>
+                  <div class="room__badge">Baie proprie</div>
+                  <div class="room__badge">TV</div>
+                  <div class="room__badge">Frigider</div>
+                  <div class="room__badge">Wi-Fi</div>
+                </div>
+
+                <div class="room__bottom">
+                  <div class="room__stock">Disponibile: <strong>7</strong> camere</div>
+                  <a class="room__cta" href="#contact">Sună pentru disponibilitate →</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Camera triplă cu balcon -->
+            <article class="room room--reverse">
+              <div class="room__media" data-img="camera_tripla_balcon"></div>
+
+              <div class="room__body">
+                <div class="room__top">
+                  <h3 class="room__title">Camera triplă cu balcon</h3>
+                  <div class="room__price">
+                    <span class="room__priceMain">300 lei</span>
+                    <span class="room__priceSub">/ noapte • extrasezon</span>
+                  </div>
+                </div>
+
+                <p class="room__text">
+                  Spațiu potrivit pentru 3 persoane, cu balcon – perfect pentru aer, liniște și vibe de vacanță.
+                </p>
+
+                <div class="room__meta">
+                  <div class="room__badge">AC</div>
+                  <div class="room__badge">Balcon</div>
+                  <div class="room__badge">Baie proprie</div>
+                  <div class="room__badge">TV</div>
+                  <div class="room__badge">Frigider</div>
+                  <div class="room__badge">Wi-Fi</div>
+                </div>
+
+                <div class="room__bottom">
+                  <div class="room__stock">Disponibile: <strong>2</strong> camere</div>
+                  <a class="room__cta" href="#contact">Sună pentru disponibilitate →</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Studio de familie -->
+            <article class="room">
+              <div class="room__media" data-img="studio_familie"></div>
+
+              <div class="room__body">
+                <div class="room__top">
+                  <h3 class="room__title">Studio de familie</h3>
+                  <div class="room__price">
+                    <span class="room__priceMain">400 lei</span>
+                    <span class="room__priceSub">/ noapte • extrasezon</span>
+                  </div>
+                </div>
+
+                <p class="room__text">
+                  Variantă ideală pentru familie: confort, spațiu și un sejur fără griji, aproape de stațiune.
+                </p>
+
+                <div class="room__meta">
+                  <div class="room__badge">AC</div>
+                  <div class="room__badge">Baie proprie</div>
+                  <div class="room__badge">TV</div>
+                  <div class="room__badge">Frigider</div>
+                  <div class="room__badge">Wi-Fi</div>
+                </div>
+
+                <div class="room__bottom">
+                  <div class="room__stock">Disponibil: <strong>1</strong> studio</div>
+                  <a class="room__cta" href="#contact">Sună pentru disponibilitate →</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="noteBar">
+            <p class="noteBar__text">
+              * Prețurile afișate sunt pentru extrasezon. În sezon pot varia.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT (same as home) -->
+      <section class="section section--alt" id="contact">
+        <div class="container">
+          <div class="contactSimple">
+            <h2 class="contactSimple__title">Contact</h2>
+
+            <div class="contactSimple__phones">
+              <a class="contactSimple__phone" href="tel:+40748108143">0748 108 143</a>
+              <a class="contactSimple__phone" href="tel:+40755604463">0755 604 463</a>
+            </div>
+
+            <div class="contactSimple__buttons">
+              <a class="chipBtn" href="https://wa.me/40748108143" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              <a class="chipBtn" href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a class="chipBtn" href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
+              <a class="chipBtn" href="#" target="_blank" rel="noopener noreferrer">TikTok</a>
+            </div>
+
+            <p class="contactSimple__hint">
+              * Înlocuiește link-urile social media cu cele reale.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p>© <span id="year"></span> Suzanne Băile Figa</p>
+        <a class="footer__top" href="#top">Sus ↑</a>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

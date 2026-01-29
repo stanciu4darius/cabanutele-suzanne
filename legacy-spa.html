@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Legacy Spa Beclean • Prezentare</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <!-- TOPBAR -->
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <div class="topbar__left">
+          <span class="topbar__label">Rezervări:</span>
+          <a class="topbar__phone" href="tel:+40748108143">0748 108 143</a>
+          <span class="topbar__sep">•</span>
+          <a class="topbar__phone" href="tel:+40755604463">0755 604 463</a>
+        </div>
+
+        <div class="topbar__right">
+          <a class="topbar__social" href="#" aria-label="Facebook">Facebook</a>
+          <a class="topbar__social" href="#" aria-label="Instagram">Instagram</a>
+          <a class="topbar__social" href="#" aria-label="TikTok">TikTok</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- HEADER -->
+    <header class="header" id="top">
+      <div class="container header__inner">
+        <a class="brand" href="./index.html" aria-label="Suzanne Băile Figa - Home">
+          <span class="brand__mark">S</span>
+          <span class="brand__text">
+            <span class="brand__name">Suzanne</span>
+            <span class="brand__sub">Băile Figa</span>
+          </span>
+        </a>
+
+        <button class="nav__toggle" id="navToggle" aria-label="Deschide meniul" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="nav" id="nav">
+          <a class="nav__link" href="./camere-hotel.html">Suzanne Băile Figa • Camere Hotel</a>
+          <a class="nav__link" href="./pensiune.html">Pensiunea Suzanne Băile Figa</a>
+          <a class="nav__link" href="./camere-hotel.html">Băile Figa • Terasă Spa Cazare</a>
+          <a class="nav__link" href="./cabana.html">Cabana Suzanne Băile Figa</a>
+          <a class="nav__link" href="./casute.html">Căsuțe Suzanne Băile Figa</a>
+          <a class="nav__link is-active" href="./legacy-spa.html">Legacy Spa</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="pageHero" aria-label="Legacy Spa - Hero">
+        <div class="pageHero__media" data-img="legacy_cover"></div>
+        <div class="pageHero__overlay"></div>
+
+        <div class="container pageHero__content">
+          <p class="pageHero__kicker">LEGACY SPA • BECLEAN</p>
+          <h1 class="pageHero__title">O zi de SPA, ca la resort</h1>
+          <p class="pageHero__subtitle">
+            Piscine interioare, zonă de relaxare și activități pentru toate vârstele.
+            Perfect când vrei să îți încarci bateriile, indiferent de sezon.
+          </p>
+
+          <div class="pageHero__chips">
+            <span class="pill">Piscine</span>
+            <span class="pill">Saune / Relax</span>
+            <span class="pill">Bowling</span>
+            <span class="pill">Fitness</span>
+          </div>
+
+          <div class="pageHero__actions">
+            <a class="btn btn--primary" href="#ce-primesti">Ce primești</a>
+            <a class="btn btn--ghost" href="#program">Program & tarife</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHAT YOU GET -->
+      <section class="section" id="ce-primesti">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title">Ce primești la Legacy Spa</h2>
+            <p class="section__desc">
+              Un mix foarte bun între relaxare (SPA) + distracție (bowling) + mișcare (fitness).
+            </p>
+          </div>
+
+          <div class="featureGrid">
+            <article class="featureCard" data-img="legacy_pool">
+              <div class="featureCard__overlay"></div>
+              <div class="featureCard__content">
+                <h3>Piscine interioare</h3>
+                <p>Înot, relaxare și timp de calitate, indiferent de vreme.</p>
+              </div>
+            </article>
+
+            <article class="featureCard" data-img="legacy_sauna">
+              <div class="featureCard__overlay"></div>
+              <div class="featureCard__content">
+                <h3>Zonă wellness</h3>
+                <p>Saună / relaxare – genul de pauză de care chiar aveai nevoie.</p>
+              </div>
+            </article>
+
+            <article class="featureCard" data-img="legacy_salt">
+              <div class="featureCard__overlay"></div>
+              <div class="featureCard__content">
+                <h3>Salină</h3>
+                <p>Atmosferă calmă, perfectă pentru “reset” și respirație ușoară.</p>
+              </div>
+            </article>
+
+            <article class="featureCard" data-img="legacy_bowling">
+              <div class="featureCard__overlay"></div>
+              <div class="featureCard__content">
+                <h3>Bowling</h3>
+                <p>Ideal pentru familie / prieteni – o oră de distracție garantată.</p>
+              </div>
+            </article>
+
+            <article class="featureCard" data-img="legacy_fitness">
+              <div class="featureCard__overlay"></div>
+              <div class="featureCard__content">
+                <h3>Fitness</h3>
+                <p>Mișcare ușoară înainte de SPA sau după – fix cât vrei tu.</p>
+              </div>
+            </article>
+
+            <article class="featureCard" data-img="legacy_kids">
+              <div class="featureCard__overlay"></div>
+              <div class="featureCard__content">
+                <h3>Și pentru copii</h3>
+                <p>Opțiuni prietenoase pentru familii – să fie bine pentru toți.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="highlightRow">
+            <div class="highlight">
+              <div class="highlight__big">SPA</div>
+              <div class="highlight__small">Relaxare & refacere</div>
+            </div>
+            <div class="highlight">
+              <div class="highlight__big">BOWLING</div>
+              <div class="highlight__small">Distracție cu prietenii</div>
+            </div>
+            <div class="highlight">
+              <div class="highlight__big">FITNESS</div>
+              <div class="highlight__small">Energie & tonus</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROGRAM & TICKETS -->
+      <section class="section section--alt" id="program">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title">Program & tarife (oficial)</h2>
+            <p class="section__desc">
+              Informații utile înainte să pleci de acasă.
+            </p>
+          </div>
+
+          <div class="infoGrid">
+            <article class="infoCard">
+              <h3 class="infoCard__title">Program</h3>
+              <ul class="infoList">
+                <li><strong>Luni:</strong> 10:00 – 20:00</li>
+                <li><strong>Marți – Duminică:</strong> 08:00 – 20:00</li>
+              </ul>
+              <p class="infoHint">Programul poate avea excepții în perioade speciale.</p>
+            </article>
+
+            <article class="infoCard">
+              <h3 class="infoCard__title">Tarife</h3>
+              <ul class="infoList">
+                <li><strong>Adult:</strong> 60 lei / zi</li>
+                <li><strong>Copil (până la 14 ani):</strong> 30 lei / zi</li>
+                <li><strong>Garanție brățară:</strong> +20 lei (returnabilă la ieșire)</li>
+                <li><strong>Bowling:</strong> 50 lei / oră</li>
+              </ul>
+            </article>
+
+            <article class="infoCard">
+              <h3 class="infoCard__title">Telefon recepție (Legacy)</h3>
+              <p class="infoBig">
+                <a href="tel:+40747299653">0747 299 653</a>
+              </p>
+              <p class="infoHint">
+                Pentru confirmare rapidă (aglomerație, program special, detalii).
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- MAP -->
+      <section class="section" id="locatie">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title">Locație</h2>
+            <p class="section__desc">
+              Deschide direct în Google Maps și pornește navigarea.
+            </p>
+          </div>
+
+          <div class="mapCard">
+            <div class="mapCard__map">
+              <iframe
+                title="Legacy Spa Beclean - Google Maps"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=Centrul%20Recreativ%20Legacy%20Beclean&output=embed">
+              </iframe>
+            </div>
+
+            <div class="mapCard__side">
+              <h3>Legacy Spa • Beclean</h3>
+              <p>Ideal pentru o zi de relaxare, în orice anotimp.</p>
+
+              <div class="mapCard__actions">
+                <a class="btn btn--primary" target="_blank" rel="noopener noreferrer"
+                  href="https://www.google.com/maps/search/?api=1&query=Centrul%20Recreativ%20Legacy%20Beclean">
+                  Deschide în Google Maps
+                </a>
+                <a class="btn btn--ghost" href="./index.html">Înapoi la Home</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT (same as home) -->
+      <section class="section section--alt" id="contact">
+        <div class="container">
+          <div class="contactSimple">
+            <h2 class="contactSimple__title">Contact cazare Suzanne</h2>
+
+            <div class="contactSimple__phones">
+              <a class="contactSimple__phone" href="tel:+40748108143">0748 108 143</a>
+              <a class="contactSimple__phone" href="tel:+40755604463">0755 604 463</a>
+            </div>
+
+            <div class="contactSimple__buttons">
+              <a class="chipBtn" href="https://wa.me/40748108143" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              <a class="chipBtn" href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a class="chipBtn" href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
+              <a class="chipBtn" href="#" target="_blank" rel="noopener noreferrer">TikTok</a>
+            </div>
+
+            <p class="contactSimple__hint">
+              * Înlocuiește link-urile social media cu cele reale.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p>© <span id="year"></span> Suzanne Băile Figa</p>
+        <a class="footer__top" href="#top">Sus ↑</a>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
