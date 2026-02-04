@@ -1,188 +1,225 @@
-// ===== Config =====
-const SLIDE_KEYS = ["poza1", "terasa", "view", "viewcabane", "pozaciubar", "pensiune"];
-const EXTS = ["jpg", "jpeg", "png", "webp"];
+(function() {
+  const yearEl = document.getElementById("year");
+  if(yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-// ===== Helpers =====
-function resolveImageUrl(key){
-  return new Promise((resolve) => {
-    let i = 0;
-
-    function tryNext(){
-      if (i >= EXTS.length){
-        resolve(null);
-        return;
-      }
-
-      const url = `./poze/${key}.${EXTS[i]}`;
-      i += 1;
-
-      const img = new Image();
-      img.onload = () => resolve(url);
-      img.onerror = () => tryNext();
-      img.src = url;
-    }
-
-    tryNext();
-  });
-}
-
-async function hydrateLocalImages(){
-  const nodes = Array.from(document.querySelectorAll("[data-img]"));
-  for (const el of nodes){
-    const key = el.getAttribute("data-img");
-    const url = await resolveImageUrl(key);
-    if (url){
-      el.style.backgroundImage = `url("${url}")`;
-      el.style.backgroundSize = "cover";
-      el.style.backgroundPosition = "center";
-    }
-  }
-}
-
-function setupYear(){
-  const year = document.getElementById("year");
-  if (year) year.textContent = new Date().getFullYear();
-}
-
-function setupNav(){
-  const nav = document.getElementById("nav");
   const navToggle = document.getElementById("navToggle");
-  if (!nav || !navToggle) return;
-
-  navToggle.addEventListener("click", () => {
-    const isOpen = nav.classList.toggle("is-open");
-    navToggle.setAttribute("aria-expanded", String(isOpen));
-  });
-
-  document.addEventListener("click", (e) => {
-    const inside = nav.contains(e.target) || navToggle.contains(e.target);
-    if (!inside && nav.classList.contains("is-open")){
-      nav.classList.remove("is-open");
-      navToggle.setAttribute("aria-expanded", "false");
-    }
-  });
-
-  nav.querySelectorAll("a").forEach((a) => {
-    a.addEventListener("click", () => {
-      nav.classList.remove("is-open");
-      navToggle.setAttribute("aria-expanded", "false");
+  const nav = document.getElementById("nav");
+  if(navToggle && nav) {
+    navToggle.addEventListener("click", () => {
+      const expanded = navToggle.getAttribute("aria-expanded") === "true";
+      navToggle.setAttribute("aria-expanded", String(!expanded));
+      nav.classList.toggle("is-open");
     });
-  });
-}
+  }
 
-// ===== Hero Slider (runs only if hero exists) =====
-function createHeroSlider(){
-  const heroBgA = document.getElementById("heroBgA");
-  const heroBgB = document.getElementById("heroBgB");
-  const heroDots = document.getElementById("heroDots");
-  const hero = document.querySelector(".hero");
+  const exts = ["jpg", "jpeg", "png", "webp"];
+  const cache = new Map();
 
-  if (!heroBgA || !heroBgB || !heroDots || !hero) return null;
-
-  let index = 0;
-  let showingA = true;
-  let timerId = null;
-
-  function setBg(el, url){
-    if (!url) return;
+  function setBg(el, url) {
+    if(!el) return;
+    if(!url) {
+      el.style.backgroundImage = "none";
+      el.classList.add("is-missing");
+      return;
+    }
+    el.classList.remove("is-missing");
     el.style.backgroundImage = `url("${url}")`;
   }
 
-  function renderDots(){
-    heroDots.innerHTML = "";
-    SLIDE_KEYS.forEach((_, i) => {
-      const b = document.createElement("button");
-      b.className = "dot" + (i === index ? " is-active" : "");
-      b.setAttribute("aria-label", `Slide ${i + 1}`);
-      b.addEventListener("click", () => goTo(i, true));
-      heroDots.appendChild(b);
+  function imgExists(url) {
+    return new Promise((resolve) => {
+      const img = new Image();
+      img.onload = () => resolve(true);
+      img.onerror = () => resolve(false);
+      img.src = url;
     });
   }
 
-  async function showSlide(i){
-    const url = await resolveImageUrl(SLIDE_KEYS[i]);
-    const on = showingA ? heroBgB : heroBgA;
-    const off = showingA ? heroBgA : heroBgB;
+  async function resolveImageUrl(key) {
+    if(!key) return null;
+    if(cache.has(key)) return cache.get(key);
 
-    setBg(on, url);
-    on.classList.add("is-visible");
-    off.classList.remove("is-visible");
+    const candidates = [key];
 
-    showingA = !showingA;
-    renderDots();
-  }
+    // auto-fix: if ends with no digit, try adding "1"
+    if(!/\d$/.test(key)) candidates.push(`${key}1`);
 
-  function next(){
-    index = (index + 1) % SLIDE_KEYS.length;
-    showSlide(index);
-  }
+    // also try key with spaces trimmed
+    const trimmed = String(key).trim();
+    if(trimmed !== key) candidates.push(trimmed);
 
-  function goTo(i, restart){
-    index = i;
-    showSlide(index);
-    if (restart){
-      stop();
-      start();
-    }
-  }
-
-  function start(){
-    timerId = setInterval(next, 6500);
-  }
-
-  function stop(){
-    if (timerId){
-      clearInterval(timerId);
-      timerId = null;
-    }
-  }
-
-  function setupSwipe(){
-    let startX = 0;
-    let endX = 0;
-
-    hero.addEventListener("touchstart", (e) => {
-      startX = e.changedTouches[0].screenX;
-    }, { passive: true });
-
-    hero.addEventListener("touchend", (e) => {
-      endX = e.changedTouches[0].screenX;
-      const diff = endX - startX;
-      if (Math.abs(diff) < 50) return;
-
-      stop();
-      if (diff < 0){
-        next();
-      } else {
-        index = (index - 1 + SLIDE_KEYS.length) % SLIDE_KEYS.length;
-        showSlide(index);
+    for(const cand of candidates) {
+      for(const ext of exts) {
+        const url = `./poze/${cand}.${ext}`;
+        const ok = await imgExists(url);
+        if(ok) {
+          cache.set(key, url);
+          return url;
+        }
       }
-      start();
+    }
+
+    cache.set(key, null);
+    return null;
+  }
+
+  // apply backgrounds for all [data-img]
+  async function hydrateDataImages() {
+    const els = Array.from(document.querySelectorAll("[data-img]"));
+    for(const el of els) {
+      const key = el.getAttribute("data-img");
+      const url = await resolveImageUrl(key);
+      setBg(el, url);
+    }
+  }
+
+  hydrateDataImages();
+
+  // ===== ROOM MODAL (Booking-style) =====
+  const modal = document.getElementById("roomModal");
+  if(!modal) return;
+
+  const modalImage = document.getElementById("modalImage");
+  const modalThumbs = document.getElementById("modalThumbs");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalSub = document.getElementById("modalSub");
+  const modalBadges = document.getElementById("modalBadges");
+  const modalDesc = document.getElementById("modalDesc");
+  const modalStock = document.getElementById("modalStock");
+
+  const btnPrev = modal.querySelector(".modal__nav--prev");
+  const btnNext = modal.querySelector(".modal__nav--next");
+
+  let images = [];
+  let activeIndex = 0;
+
+  function openModal() {
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal() {
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+    images = [];
+    activeIndex = 0;
+    if(modalThumbs) modalThumbs.innerHTML = "";
+    setBg(modalImage, null);
+  }
+
+  function badgesFrom(str) {
+    const items = (str || "")
+      .split(",")
+      .map((s) => s.trim())
+      .filter(Boolean);
+
+    if(!modalBadges) return;
+    modalBadges.innerHTML = "";
+
+    for(const it of items) {
+      const d = document.createElement("div");
+      d.className = "modal__badge";
+      d.textContent = it;
+      modalBadges.appendChild(d);
+    }
+  }
+
+  async function renderActive() {
+    if(!images.length) return;
+
+    const key = images[activeIndex];
+    const url = await resolveImageUrl(key);
+    setBg(modalImage, url);
+
+    const thumbs = Array.from(modalThumbs.querySelectorAll(".modal__thumb"));
+    thumbs.forEach((t, i) => t.classList.toggle("is-active", i === activeIndex));
+  }
+
+  async function buildThumbs() {
+    if(!modalThumbs) return;
+    modalThumbs.innerHTML = "";
+
+    for(let i = 0; i < images.length; i += 1) {
+      const key = images[i];
+      const url = await resolveImageUrl(key);
+
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "modal__thumb" + (i === activeIndex ? " is-active" : "");
+      b.setAttribute("aria-label", `Imagine ${i + 1}`);
+      setBg(b, url);
+
+      b.addEventListener("click", () => {
+        activeIndex = i;
+        renderActive();
+      });
+
+      modalThumbs.appendChild(b);
+    }
+  }
+
+  function next() {
+    if(!images.length) return;
+    activeIndex = (activeIndex + 1) % images.length;
+    renderActive();
+  }
+
+  function prev() {
+    if(!images.length) return;
+    activeIndex = (activeIndex - 1 + images.length) % images.length;
+    renderActive();
+  }
+
+  if(btnNext) btnNext.addEventListener("click", next);
+  if(btnPrev) btnPrev.addEventListener("click", prev);
+
+  // open buttons
+  const openers = Array.from(document.querySelectorAll("[data-open-room]"));
+  for(const btn of openers) {
+    btn.addEventListener("click", async () => {
+      const title = btn.getAttribute("data-room-title") || "";
+      const price = btn.getAttribute("data-room-price") || "";
+      const stock = btn.getAttribute("data-room-stock") || "";
+      const features = btn.getAttribute("data-room-features") || "";
+      const desc = btn.getAttribute("data-room-desc") || "";
+      const imgs = btn.getAttribute("data-images") || "";
+
+      if(modalTitle) modalTitle.textContent = title;
+      if(modalSub) modalSub.textContent = price;
+      if(modalStock) modalStock.textContent = stock;
+      if(modalDesc) modalDesc.textContent = desc;
+      badgesFrom(features);
+
+      images = imgs
+        .split(",")
+        .map((s) => s.trim())
+        .filter(Boolean);
+
+      activeIndex = 0;
+
+      openModal();
+      await buildThumbs();
+      await renderActive();
     });
   }
 
-  async function init(){
-    const firstUrl = await resolveImageUrl(SLIDE_KEYS[0]);
-    const secondUrl = await resolveImageUrl(SLIDE_KEYS[1] || SLIDE_KEYS[0]);
-
-    setBg(heroBgA, firstUrl);
-    heroBgA.classList.add("is-visible");
-    setBg(heroBgB, secondUrl);
-
-    renderDots();
-    setupSwipe();
-    start();
+  // close handlers
+  const closers = Array.from(modal.querySelectorAll("[data-modal-close]"));
+  for(const c of closers) {
+    c.addEventListener("click", closeModal);
   }
 
-  return { init };
-}
+  document.addEventListener("keydown", (e) => {
+    if(!modal.classList.contains("is-open")) return;
 
-// ===== Init =====
-(async function init(){
-  setupYear();
-  setupNav();
-  await hydrateLocalImages();
-
-  const slider = createHeroSlider();
-  if (slider) await slider.init();
+    if(e.key === "Escape") {
+      closeModal();
+    } else if(e.key === "ArrowRight") {
+      next();
+    } else if(e.key === "ArrowLeft") {
+      prev();
+    }
+  });
 })();

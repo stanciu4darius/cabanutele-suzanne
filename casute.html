@@ -44,7 +44,7 @@
         <nav class="nav" id="nav">
           <a class="nav__link" href="./camere-hotel.html">Suzanne Băile Figa • Camere Hotel</a>
           <a class="nav__link" href="./pensiune.html">Pensiunea Suzanne Băile Figa</a>
-          <a class="nav__link" href="./camere-hotel.html">Băile Figa • Terasă Spa Cazare</a>
+          <a class="nav__link" href="./terasa-spa.html">Băile Figa • Terasă Spa Cazare</a>
           <a class="nav__link" href="./cabana.html">Cabana Suzanne Băile Figa</a>
           <a class="nav__link is-active" href="./casute.html">Căsuțe Suzanne Băile Figa</a>
         </nav>
@@ -53,82 +53,90 @@
 
     <main>
       <!-- HERO -->
-      <section class="pageHero" aria-label="Căsuțe Suzanne - Hero">
-        <div class="pageHero__media" data-img="casute_cover"></div>
+      <section class="pageHero" aria-label="Căsuțe - Hero">
+        <!-- Schimbă cheia dacă ai alt nume de fișier în /poze/ -->
+        <div class="pageHero__media" data-img="CasuteHero1"></div>
         <div class="pageHero__overlay"></div>
 
         <div class="container pageHero__content">
-          <p class="pageHero__kicker">CĂSUȚE SUZANNE • BĂILE FIGA</p>
-          <h1 class="pageHero__title">Căsuțe cu aer condiționat, vibe de vacanță</h1>
+          <p class="pageHero__kicker">CĂSUȚE SUZANNE BĂILE FIGA</p>
+          <h1 class="pageHero__title">Căsuțe cu aer condiționat, aproape de stațiune</h1>
           <p class="pageHero__subtitle">
-            Cazare în Beclean, aproape de stațiune. Unități confortabile, ideale pentru familie sau grupuri mici.
-            Prețurile afișate sunt pentru <strong>extrasezon</strong>.
+            Unități individuale, practice și confortabile.
           </p>
 
           <div class="pageHero__chips">
             <span class="pill">AC</span>
-            <span class="pill">Baie proprie</span>
-            <span class="pill">TV + frigider</span>
+            <span class="pill">Baie privată</span>
             <span class="pill">Terasă</span>
+            <span class="pill">Grătar</span>
+            <span class="pill">Parcare privată</span>
           </div>
 
           <div class="pageHero__actions">
-            <a class="btn btn--primary" href="#unitati">Vezi unitatea</a>
+            <a class="btn btn--primary" href="#unitati">Vezi căsuțele</a>
             <a class="btn btn--ghost" href="#contact">Contact</a>
           </div>
         </div>
       </section>
 
-      <!-- UNITATI -->
+      <!-- UNITS -->
       <section class="section" id="unitati">
         <div class="container">
           <div class="section__head">
-            <h2 class="section__title">Unități & tarife</h2>
-            <p class="section__desc">Preț extrasezon + număr de unități disponibile.</p>
+            <h2 class="section__title">Căsuțe & tarife</h2>
+           
           </div>
 
           <div class="roomList">
+            <!-- 1) Casă de vacanță -->
             <article class="room">
-              <div class="room__media" data-img="casa_vacanta"></div>
+              <div class="room__media" data-img="CasuteCasaVacanta1"></div>
 
               <div class="room__body">
                 <div class="room__top">
-                  <h3 class="room__title">Casa de vacanță</h3>
+                  <h3 class="room__title">Casă de vacanță</h3>
                   <div class="room__price">
                     <span class="room__priceMain">225 lei</span>
-                    <span class="room__priceSub">/ noapte • extrasezon</span>
+                    <span class="room__priceSub">/ noapte</span>
                   </div>
                 </div>
 
                 <p class="room__text">
-                  Unități cu baie proprie, climatizare (AC), TV și frigider. Perfecte pentru relaxare aproape de Băile Figa.
+                  Căsuță compactă și curată, ideală pentru un sejur relaxant la Băile Figa. Intrare privată, terasă și dotări esențiale
+                  pentru confort: aer condiționat, baie proprie și TV.
                 </p>
 
                 <div class="room__meta">
                   <div class="room__badge">AC</div>
-                  <div class="room__badge">Baie proprie</div>
-                  <div class="room__badge">TV</div>
-                  <div class="room__badge">Frigider</div>
-                  <div class="room__badge">Parcare</div>
+                  <div class="room__badge">Baie privată</div>
+                  <div class="room__badge">Terasă</div>
+                  <div class="room__badge">Grătar</div>
                 </div>
 
                 <div class="room__bottom">
-                  <div class="room__stock">Disponibile: <strong>6</strong> unități</div>
-                  <a class="room__cta" href="#contact">Sună pentru disponibilitate →</a>
+                  <div class="room__stock">Disponibile: <strong>6</strong> căsuțe</div>
+
+                  <button
+                    class="room__ctaBtn"
+                    type="button"
+                    data-open-room="casute-casa-vacanta"
+                    data-room-title="Casă de vacanță"
+                    data-room-price="225 lei / noapte • extrasezon"
+                    data-room-stock="6 căsuțe disponibile"
+                    data-room-features="casă de vacanță întreagă,15 m²,AC,baie privată,terasă,grătar,TV cu ecran plat"
+                    data-room-desc="Casă de vacanță — unitate individuală, cu intrare privată și terasă. Ideală dacă vrei cazare simplă, practică și aproape de stațiune. Aer condiționat, baie proprie și dotări pentru un sejur fără griji."
+                    data-images="CasuteCasaVacanta1,CasuteCasaVacanta2,CasuteInterior1,CasuteInterior2,CasuteDormitor1,CasuteDormitor2,CasuteBaie1,CasuteBaie2,CasuteExterior1,CasuteExterior2"
+                  >
+                    Vezi detalii →
+                  </button>
                 </div>
               </div>
             </article>
-          </div>
-
-          <div class="noteBar">
-            <p class="noteBar__text">
-              * Prețurile afișate sunt pentru extrasezon. În sezon pot varia.
-            </p>
-          </div>
-        </div>
+          
       </section>
 
-      <!-- CONTACT (same as home) -->
+      <!-- CONTACT -->
       <section class="section section--alt" id="contact">
         <div class="container">
           <div class="contactSimple">
@@ -146,12 +154,52 @@
               <a class="chipBtn" href="#" target="_blank" rel="noopener noreferrer">TikTok</a>
             </div>
 
-            <p class="contactSimple__hint">
-              * Înlocuiește link-urile social media cu cele reale.
-            </p>
+            
           </div>
         </div>
       </section>
+
+      <!-- MODAL (booking style) -->
+      <div class="modal" id="roomModal" aria-hidden="true">
+        <div class="modal__backdrop" data-modal-close></div>
+
+        <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+          <button class="modal__close" type="button" aria-label="Închide" data-modal-close>×</button>
+
+          <div class="modal__grid">
+            <div class="modal__left">
+              <div class="modal__viewer">
+                <button class="modal__nav modal__nav--prev" type="button" aria-label="Anterior">‹</button>
+                <div class="modal__image" id="modalImage"></div>
+                <button class="modal__nav modal__nav--next" type="button" aria-label="Următor">›</button>
+              </div>
+
+              <div class="modal__thumbs" id="modalThumbs"></div>
+            </div>
+
+            <div class="modal__right">
+              <h3 class="modal__title" id="modalTitle"></h3>
+              <div class="modal__sub" id="modalSub"></div>
+
+              <div class="modal__badges" id="modalBadges"></div>
+
+              <p class="modal__desc" id="modalDesc"></p>
+
+              <div class="modal__info">
+                <div class="modal__infoRow">
+                  <span class="modal__infoLabel">Disponibilitate</span>
+                  <span class="modal__infoValue" id="modalStock"></span>
+                </div>
+              </div>
+
+              <div class="modal__actions">
+                <a class="btn btn--primary" href="#contact" data-modal-close>Sună pentru rezervare</a>
+                <a class="btn btn--ghost" href="tel:+40748108143">0748 108 143</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer class="footer">
@@ -161,6 +209,207 @@
       </div>
     </footer>
 
-    <script src="./script.js"></script>
+    <!-- Script identic ca la pensiune / hotel (images + modal + keyboard) -->
+    <script>
+      (function() {
+        const yearEl = document.getElementById("year");
+        if(yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+        const navToggle = document.getElementById("navToggle");
+        const nav = document.getElementById("nav");
+        if(navToggle && nav) {
+          navToggle.addEventListener("click", () => {
+            const expanded = navToggle.getAttribute("aria-expanded") === "true";
+            navToggle.setAttribute("aria-expanded", String(!expanded));
+            nav.classList.toggle("is-open");
+          });
+        }
+
+        const exts = ["jpg", "jpeg", "png", "webp"];
+        const cache = new Map();
+
+        function setBg(el, url) {
+          if(!el) return;
+          if(!url) {
+            el.style.backgroundImage = "none";
+            return;
+          }
+          el.style.backgroundImage = `url("${url}")`;
+        }
+
+        function imgExists(url) {
+          return new Promise((resolve) => {
+            const img = new Image();
+            img.onload = () => resolve(true);
+            img.onerror = () => resolve(false);
+            img.src = url;
+          });
+        }
+
+        async function resolveImageUrl(key) {
+          if(!key) return null;
+          if(cache.has(key)) return cache.get(key);
+
+          const candidates = [key];
+          if(!/\d$/.test(key)) candidates.push(`${key}1`);
+
+          const trimmed = String(key).trim();
+          if(trimmed !== key) candidates.push(trimmed);
+
+          for(const cand of candidates) {
+            for(const ext of exts) {
+              const url = `./poze/${cand}.${ext}`;
+              const ok = await imgExists(url);
+              if(ok) {
+                cache.set(key, url);
+                return url;
+              }
+            }
+          }
+
+          cache.set(key, null);
+          return null;
+        }
+
+        async function hydrateDataImages() {
+          const els = Array.from(document.querySelectorAll("[data-img]"));
+          for(const el of els) {
+            const key = el.getAttribute("data-img");
+            const url = await resolveImageUrl(key);
+            setBg(el, url);
+          }
+        }
+
+        hydrateDataImages();
+
+        // ===== ROOM MODAL =====
+        const modal = document.getElementById("roomModal");
+        if(!modal) return;
+
+        const modalImage = document.getElementById("modalImage");
+        const modalThumbs = document.getElementById("modalThumbs");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalSub = document.getElementById("modalSub");
+        const modalBadges = document.getElementById("modalBadges");
+        const modalDesc = document.getElementById("modalDesc");
+        const modalStock = document.getElementById("modalStock");
+
+        const btnPrev = modal.querySelector(".modal__nav--prev");
+        const btnNext = modal.querySelector(".modal__nav--next");
+
+        let images = [];
+        let activeIndex = 0;
+
+        function openModal() {
+          modal.classList.add("is-open");
+          modal.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
+        }
+
+        function closeModal() {
+          modal.classList.remove("is-open");
+          modal.setAttribute("aria-hidden", "true");
+          document.body.style.overflow = "";
+          images = [];
+          activeIndex = 0;
+          if(modalThumbs) modalThumbs.innerHTML = "";
+          setBg(modalImage, null);
+        }
+
+        function badgesFrom(str) {
+          const items = (str || "").split(",").map(s => s.trim()).filter(Boolean);
+          if(!modalBadges) return;
+          modalBadges.innerHTML = "";
+          for(const it of items) {
+            const d = document.createElement("div");
+            d.className = "modal__badge";
+            d.textContent = it;
+            modalBadges.appendChild(d);
+          }
+        }
+
+        async function renderActive() {
+          if(!images.length) return;
+          const key = images[activeIndex];
+          const url = await resolveImageUrl(key);
+          setBg(modalImage, url);
+
+          const thumbs = Array.from(modalThumbs.querySelectorAll(".modal__thumb"));
+          thumbs.forEach((t, i) => t.classList.toggle("is-active", i === activeIndex));
+        }
+
+        async function buildThumbs() {
+          if(!modalThumbs) return;
+          modalThumbs.innerHTML = "";
+          for(let i = 0; i < images.length; i += 1) {
+            const key = images[i];
+            const url = await resolveImageUrl(key);
+
+            const b = document.createElement("button");
+            b.type = "button";
+            b.className = "modal__thumb" + (i === activeIndex ? " is-active" : "");
+            b.setAttribute("aria-label", `Imagine ${i + 1}`);
+            setBg(b, url);
+
+            b.addEventListener("click", () => {
+              activeIndex = i;
+              renderActive();
+            });
+
+            modalThumbs.appendChild(b);
+          }
+        }
+
+        function next() {
+          if(!images.length) return;
+          activeIndex = (activeIndex + 1) % images.length;
+          renderActive();
+        }
+
+        function prev() {
+          if(!images.length) return;
+          activeIndex = (activeIndex - 1 + images.length) % images.length;
+          renderActive();
+        }
+
+        if(btnNext) btnNext.addEventListener("click", next);
+        if(btnPrev) btnPrev.addEventListener("click", prev);
+
+        const openers = Array.from(document.querySelectorAll("[data-open-room]"));
+        for(const btn of openers) {
+          btn.addEventListener("click", async () => {
+            const title = btn.getAttribute("data-room-title") || "";
+            const price = btn.getAttribute("data-room-price") || "";
+            const stock = btn.getAttribute("data-room-stock") || "";
+            const features = btn.getAttribute("data-room-features") || "";
+            const desc = btn.getAttribute("data-room-desc") || "";
+            const imgs = btn.getAttribute("data-images") || "";
+
+            if(modalTitle) modalTitle.textContent = title;
+            if(modalSub) modalSub.textContent = price;
+            if(modalStock) modalStock.textContent = stock;
+            if(modalDesc) modalDesc.textContent = desc;
+            badgesFrom(features);
+
+            images = imgs.split(",").map(s => s.trim()).filter(Boolean);
+            activeIndex = 0;
+
+            openModal();
+            await buildThumbs();
+            await renderActive();
+          });
+        }
+
+        const closers = Array.from(modal.querySelectorAll("[data-modal-close]"));
+        for(const c of closers) c.addEventListener("click", closeModal);
+
+        document.addEventListener("keydown", (e) => {
+          if(!modal.classList.contains("is-open")) return;
+          if(e.key === "Escape") closeModal();
+          if(e.key === "ArrowRight") next();
+          if(e.key === "ArrowLeft") prev();
+        });
+      })();
+    </script>
   </body>
 </html>

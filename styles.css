@@ -1303,3 +1303,619 @@ input::placeholder, textarea::placeholder{
   .mapCard{ grid-template-columns:1fr; }
   .mapCard__map iframe{ height:320px; }
 }
+
+
+/* ===== ROOM CTA BUTTON (looks like link but premium) ===== */
+.room__ctaBtn{
+  appearance:none;
+  border:none;
+  background:transparent;
+  padding:0;
+  margin:0;
+  color:rgba(255,255,255,0.92);
+  font:inherit;
+  cursor:pointer;
+  text-align:left;
+  text-decoration:none;
+  opacity:0.95;
+}
+.room__ctaBtn:hover{
+  opacity:1;
+  text-decoration:underline;
+}
+
+/* ===== MODAL (Booking-style) ===== */
+.modal{
+  position:fixed;
+  inset:0;
+  display:none;
+  z-index:9999;
+}
+.modal.is-open{
+  display:block;
+}
+.modal__backdrop{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.65);
+  backdrop-filter:blur(6px);
+}
+.modal__panel{
+  position:relative;
+  width:min(1120px,92vw);
+  max-height:90vh;
+  margin:5vh auto;
+  background:rgba(18,22,26,0.96);
+  border:1px solid rgba(255,255,255,0.10);
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 18px 60px rgba(0,0,0,0.55);
+}
+.modal__close{
+  position:absolute;
+  top:12px;
+  right:12px;
+  width:40px;
+  height:40px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.12);
+  background:rgba(255,255,255,0.08);
+  color:#fff;
+  font-size:24px;
+  cursor:pointer;
+  z-index:2;
+}
+.modal__grid{
+  display:grid;
+  grid-template-columns:1.35fr 1fr;
+  gap:0;
+}
+.modal__left{
+  padding:18px;
+  border-right:1px solid rgba(255,255,255,0.08);
+}
+.modal__right{
+  padding:20px 22px;
+}
+.modal__viewer{
+  position:relative;
+  border-radius:14px;
+  overflow:hidden;
+  aspect-ratio:16/10;
+  background:rgba(255,255,255,0.06);
+}
+.modal__image{
+  width:100%;
+  height:100%;
+  background-size:cover;
+  background-position:center;
+}
+.modal__nav{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:44px;
+  height:44px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,0.14);
+  background:rgba(0,0,0,0.30);
+  color:#fff;
+  font-size:28px;
+  cursor:pointer;
+}
+.modal__nav--prev{ left:12px; }
+.modal__nav--next{ right:12px; }
+
+.modal__thumbs{
+  display:flex;
+  gap:10px;
+  padding-top:12px;
+  overflow:auto;
+}
+.modal__thumb{
+  flex:0 0 auto;
+  width:86px;
+  height:62px;
+  border-radius:10px;
+  border:2px solid rgba(255,255,255,0.10);
+  background:rgba(255,255,255,0.05);
+  background-size:cover;
+  background-position:center;
+  cursor:pointer;
+  opacity:0.9;
+}
+.modal__thumb.is-active{
+  border-color:rgba(255,255,255,0.55);
+  opacity:1;
+}
+
+.modal__title{
+  margin:6px 0 6px 0;
+  font-size:26px;
+  line-height:1.15;
+  color:#fff;
+}
+.modal__sub{
+  color:rgba(255,255,255,0.75);
+  margin-bottom:10px;
+}
+.modal__badges{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:10px 0 14px 0;
+}
+.modal__badge{
+  border:1px solid rgba(255,255,255,0.14);
+  background:rgba(255,255,255,0.06);
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:13px;
+  color:rgba(255,255,255,0.92);
+}
+.modal__desc{
+  color:rgba(255,255,255,0.85);
+  line-height:1.6;
+  margin:0 0 14px 0;
+}
+.modal__info{
+  border-top:1px solid rgba(255,255,255,0.10);
+  padding-top:12px;
+  margin-top:8px;
+}
+.modal__infoRow{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  color:rgba(255,255,255,0.85);
+}
+.modal__infoLabel{
+  color:rgba(255,255,255,0.70);
+}
+.modal__actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:16px;
+}
+
+/* Mobile modal */
+@media (max-width: 920px){
+  .modal__grid{
+    grid-template-columns:1fr;
+  }
+  .modal__left{
+    border-right:none;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+  }
+  .modal__panel{
+    margin:4vh auto;
+    max-height:92vh;
+  }
+}
+/* ===== FIX CLARITATE IMAGINI (hero/cards/modal) ===== */
+.pageHero__media,
+.room__media,
+.modal__image,
+.modal__thumb {
+  filter: none !important;
+  backdrop-filter: none !important;
+  transform: none !important;
+}
+
+/* Hero: să fie sharp și full cover */
+.pageHero__media {
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Cardurile cu camere: să se vadă clar */
+.room__media {
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Imaginea mare din modal */
+.modal__image {
+  background-size: contain !important;  /* important pt “clar”, nu crop agresiv */
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-color: rgba(0, 0, 0, 0.25); /* fundal discret */
+}
+
+/* Thumbnails din modal */
+.modal__thumb {
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+/* ===== FIX MODAL SCROLL + LAYOUT ===== */
+.modal {
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__panel {
+  height: min(92vh, 880px); /* modal înalt, dar nu iese din ecran */
+  max-height: 92vh;
+  overflow: hidden; /* ca să nu curgă în afară */
+}
+
+/* Coloana din dreapta (detalii) să aibă scroll */
+.modal__side {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Aici e conținutul cu descrierea lungă: îi dăm scroll */
+.modal__sideBody {
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* Scrollbar mai “clean” (Chrome/Edge) */
+.modal__sideBody::-webkit-scrollbar {
+  width: 10px;
+}
+.modal__sideBody::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.18);
+  border-radius: 10px;
+}
+.modal__sideBody::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.18);
+}
+/* ===== IMAGE QUALITY FIX (override) ===== */
+.room__media,
+.pageHero__media,
+.modal__image,
+.modal__thumb {
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: none !important;
+  transform: none !important;
+}
+
+/* Card images: cover (booking look) */
+.room__media,
+.pageHero__media {
+  background-size: cover;
+}
+
+/* Modal main image: contain (no cropping) */
+.modal__image {
+  background-size: contain;
+  background-color: rgba(0,0,0,0.35);
+}
+
+/* Thumbs: cover */
+.modal__thumb {
+  background-size: cover;
+}
+
+/* Prevent blur from any skeleton/overlay */
+.room__media::before,
+.modal__image::before,
+.pageHero__media::before {
+  content: none !important;
+}
+
+/* ===== MODAL LAYOUT FIX (scroll + viewport fit) ===== */
+.modal__panel {
+  max-height: calc(100vh - 48px);
+  overflow: hidden;
+}
+
+.modal__grid {
+  height: calc(100vh - 48px);
+}
+
+/* Left side scroll if needed */
+.modal__left {
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* Right side scroll for long text */
+.modal__right {
+  min-height: 0;
+  overflow: auto;
+  max-height: calc(100vh - 48px);
+  padding-right: 10px; /* ca să nu intre scrollbar peste text */
+}
+
+/* Make description wrap nicely */
+.modal__desc {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.55;
+}
+
+/* Better viewer proportions */
+.modal__viewer {
+  aspect-ratio: 16 / 10;
+}
+
+/* If your layout becomes too tight on small screens */
+@media (max-width: 900px) {
+  .modal__grid {
+    height: auto;
+    max-height: calc(100vh - 24px);
+    overflow: hidden;
+  }
+
+  .modal__right {
+    max-height: 42vh;
+  }
+
+  .modal__viewer {
+    aspect-ratio: 16 / 12;
+  }
+}
+/* ===== FIX: remove blur from images ===== */
+.pageHero__media,
+.room__media,
+.modal__image,
+.modal__thumb {
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Make sure backgrounds render crisp */
+.pageHero__media,
+.room__media,
+.modal__image,
+.modal__thumb {
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+/* ===== Compartimentare (design) ===== */
+
+.section__head--split {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.section__metaRight {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.metaChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.10);
+  backdrop-filter: blur(10px);
+}
+
+.compGrid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.compCard {
+  position: relative;
+  border-radius: 18px;
+  padding: 18px;
+}
+
+/* ===== CABANA: Compartimentare (Hotel-grade) ===== */
+.planSection{
+  padding:72px 0;
+}
+
+.planHead{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:18px;
+  margin-bottom:18px;
+  flex-wrap:wrap;
+}
+
+.planHead__title{
+  margin:0;
+  font-size:clamp(26px, 2.4vw, 34px);
+  letter-spacing:.02em;
+}
+
+.planHead__subtitle{
+  margin:8px 0 0;
+  color:rgba(255,255,255,.72);
+  max-width:70ch;
+  line-height:1.6;
+}
+
+.planHead__right{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+}
+
+.planChip{
+  padding:10px 14px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(255,255,255,.04);
+  color:rgba(255,255,255,.88);
+  font-size:13px;
+  letter-spacing:.01em;
+}
+
+/* Grid */
+.planGrid{
+  display:grid;
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+  gap:14px;
+  margin-top:18px;
+}
+
+/* Card */
+.planCard{
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.03);
+  box-shadow:0 18px 60px rgba(0,0,0,.30);
+  transition:transform .22s ease, border-color .22s ease, background .22s ease;
+  display:flex;
+  flex-direction:column;
+  min-height:100%;
+}
+
+.planCard:hover{
+  transform:translateY(-2px);
+  border-color:rgba(255,255,255,.18);
+  background:rgba(255,255,255,.04);
+}
+
+.planCard__media{
+  position:relative;
+  height:220px;
+  background:rgba(255,255,255,.03);
+  overflow:hidden;
+}
+
+.planCard__media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transform:scale(1.02);
+  transition:transform .35s ease;
+}
+
+.planCard:hover .planCard__media img{
+  transform:scale(1.06);
+}
+
+.planCard__media::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, rgba(0,0,0,.10) 0%, rgba(0,0,0,.48) 100%);
+}
+
+.planCard__label{
+  position:absolute;
+  left:14px;
+  top:14px;
+  z-index:1;
+  padding:8px 10px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.16);
+  background:rgba(0,0,0,.35);
+  color:rgba(255,255,255,.92);
+  font-size:12px;
+  letter-spacing:.01em;
+  backdrop-filter: blur(8px);
+}
+
+.planCard__body{
+  padding:18px 18px 16px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.planCard__top{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:12px;
+}
+
+.planCard__title{
+  margin:0;
+  font-size:18px;
+  letter-spacing:.01em;
+  color:#fff;
+}
+
+.planCard__meta{
+  color:rgba(255,255,255,.70);
+  font-size:13px;
+  white-space:nowrap;
+}
+
+.planCard__text{
+  margin:0;
+  color:rgba(255,255,255,.80);
+  line-height:1.6;
+  font-size:14px;
+}
+
+.planCard__tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:4px;
+}
+
+.planTag{
+  padding:8px 10px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(255,255,255,.04);
+  color:rgba(255,255,255,.86);
+  font-size:12px;
+}
+
+/* Note box */
+.planNote{
+  margin-top:14px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.03);
+  padding:16px;
+  display:grid;
+  grid-template-columns:140px 1fr;
+  gap:12px;
+  align-items:start;
+}
+
+.planNote__title{
+  font-size:13px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.68);
+  padding-top:2px;
+}
+
+.planNote__text{
+  margin:0;
+  color:rgba(255,255,255,.78);
+  line-height:1.7;
+  font-size:14px;
+}
+
+/* Responsive */
+@media (max-width: 980px){
+  .planGrid{
+    grid-template-columns:1fr;
+  }
+  .planCard__media{
+    height:240px;
+  }
+  .planNote{
+    grid-template-columns:1fr;
+  }
+}
