@@ -2057,3 +2057,34 @@ input::placeholder, textarea::placeholder{
   object-fit: contain;
   display: block;
 }
+
+
+
+
+
+
+
+
+.header {
+  position: sticky; /* sau relative */
+  top: 0;
+  z-index: 1000;
+}
+
+.nav__toggle {
+  position: relative;
+  z-index: 1100;
+}
+.hero__bg,
+.hero__overlay {
+  z-index: 0;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+}
+.hero__bg,
+.hero__overlay {
+  pointer-events: none;
+}
