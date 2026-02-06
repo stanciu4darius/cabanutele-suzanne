@@ -2060,3 +2060,4 @@ input::placeholder, textarea::placeholder{
 
 
 
+.modal__desc { white-space: pre-line; }
