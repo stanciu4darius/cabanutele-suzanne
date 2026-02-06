@@ -2058,18 +2058,5 @@ input::placeholder, textarea::placeholder{
   display: block;
 }
 
-@media (max-width: 900px) {
-  .hero,
-  .hero * {
-    pointer-events: none;
-  }
-
-  .header,
-  .header * {
-    pointer-events: auto;
-  }
-}
-
-
 
 
