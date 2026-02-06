@@ -2059,32 +2059,22 @@ input::placeholder, textarea::placeholder{
 }
 
 
-
-
-
-
-
-
+/* Header peste orice (mai ales pe mobil) */
 .header {
-  position: sticky; /* sau relative */
+  position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 9999;
 }
 
+/* Butonul hamburger să fie clickabil garantat */
 .nav__toggle {
   position: relative;
-  z-index: 1100;
-}
-.hero__bg,
-.hero__overlay {
-  z-index: 0;
+  z-index: 10000;
 }
 
-.hero__content {
-  position: relative;
-  z-index: 1;
-}
+/* Orice layer din hero să nu “fure” tap-ul */
 .hero__bg,
-.hero__overlay {
+.hero__overlay,
+.hero__dots {
   pointer-events: none;
 }
