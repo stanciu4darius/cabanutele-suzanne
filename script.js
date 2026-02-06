@@ -223,3 +223,135 @@
     }
   });
 })();
+
+(function() {
+  const heroA = document.getElementById("heroBgA");
+  const heroB = document.getElementById("heroBgB");
+  const dotsWrap = document.getElementById("heroDots");
+
+  if(!heroA || !heroB) return;
+
+  const slides = ["Coperta1", "Coperta2", "Coperta3", "Coperta4", "Coperta5"];
+  const exts = ["jpg", "jpeg", "png", "webp"];
+  const cache = new Map();
+
+  function setBg(el, url) {
+    if(!el || !url) return;
+    el.style.backgroundImage = `url("${url}")`;
+  }
+
+  function imgExists(url) {
+    return new Promise((resolve) => {
+      const img = new Image();
+      img.onload = () => resolve(true);
+      img.onerror = () => resolve(false);
+      img.src = url;
+    });
+  }
+
+  async function resolveImageUrl(key) {
+    if(!key) return null;
+    if(cache.has(key)) return cache.get(key);
+
+    for(const ext of exts) {
+      const url = `./poze/${key}.${ext}`;
+      const ok = await imgExists(url);
+      if(ok) {
+        cache.set(key, url);
+        return url;
+      }
+    }
+
+    cache.set(key, null);
+    return null;
+  }
+
+  // ===== dots =====
+  function buildDots() {
+    if(!dotsWrap) return;
+    dotsWrap.innerHTML = "";
+    slides.forEach((_, i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "hero__dot" + (i === 0 ? " is-active" : "");
+      b.setAttribute("aria-label", `Slide ${i + 1}`);
+      b.addEventListener("click", () => goTo(i, true));
+      dotsWrap.appendChild(b);
+    });
+  }
+
+  function setActiveDot(i) {
+    if(!dotsWrap) return;
+    const dots = Array.from(dotsWrap.querySelectorAll(".hero__dot"));
+    dots.forEach((d, idx) => d.classList.toggle("is-active", idx === i));
+  }
+
+  // ===== slider logic (A/B crossfade) =====
+  let index = 0;
+  let showingA = true;
+  let timer = null;
+  let isPaused = false;
+
+  async function applyInitial() {
+    const url0 = await resolveImageUrl(slides[0]);
+    const url1 = await resolveImageUrl(slides[1]);
+
+    if(url0) setBg(heroA, url0);
+    if(url1) setBg(heroB, url1);
+
+    heroA.classList.add("is-show");
+    heroB.classList.remove("is-show");
+  }
+
+  async function goTo(i, userTriggered = false) {
+    index = (i + slides.length) % slides.length;
+
+    const nextIndex = index;
+    const nextKey = slides[nextIndex];
+    const nextUrl = await resolveImageUrl(nextKey);
+
+    const incoming = showingA ? heroB : heroA;
+    const outgoing = showingA ? heroA : heroB;
+
+    if(nextUrl) setBg(incoming, nextUrl);
+
+    incoming.classList.add("is-show");
+    outgoing.classList.remove("is-show");
+
+    showingA = !showingA;
+    setActiveDot(nextIndex);
+
+    if(userTriggered) restart();
+  }
+
+  function next() {
+    if(isPaused) return;
+    goTo(index + 1);
+  }
+
+  function restart() {
+    stop();
+    start();
+  }
+
+  function start() {
+    timer = setInterval(next, 4500); // schimbă la 3500/5000 cum vrei
+  }
+
+  function stop() {
+    if(timer) clearInterval(timer);
+    timer = null;
+  }
+
+  // pause on hover (opțional)
+  const hero = heroA.closest(".hero");
+  if(hero) {
+    hero.addEventListener("mouseenter", () => { isPaused = true; });
+    hero.addEventListener("mouseleave", () => { isPaused = false; });
+  }
+
+  // init
+  buildDots();
+  applyInitial().then(() => start());
+})();
+

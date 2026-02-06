@@ -13,15 +13,16 @@
       <div class="container topbar__inner">
         <div class="topbar__left">
           <span class="topbar__label">Rezervări:</span>
-          <a class="topbar__phone" href="tel:+40748108143">0748 108 143</a>
-          <span class="topbar__sep">•</span>
           <a class="topbar__phone" href="tel:+40755604463">0755 604 463</a>
+          <span class="topbar__sep">•</span>
+          <a class="topbar__phone" href="tel:+40748108143">0748 108 143</a>
         </div>
 
         <div class="topbar__right">
-          <a class="topbar__social" href="#" aria-label="Facebook">Facebook</a>
-          <a class="topbar__social" href="#" aria-label="Instagram">Instagram</a>
-          <a class="topbar__social" href="#" aria-label="TikTok">TikTok</a>
+          <a class="topbar__social" href="https://wa.me/40755 604 463" aria-label="WhatsApp">WhatsApp</a>
+          <a class="topbar__social" href="https://www.facebook.com/profile.php?id=61587376957999" aria-label="Facebook">Facebook</a>
+          <a class="topbar__social" href="https://www.instagram.com/cazaresuzanne?igsh=MXh0eHEyYTVycHlrcA%3D%3D&utm_source=qr" aria-label="Instagram">Instagram</a>
+          <a class="topbar__social" href="https://www.tiktok.com/@suzanne_cazare?_r=1&_t=ZN-93gCoedaLOY" aria-label="TikTok">TikTok</a>
         </div>
       </div>
     </header>
@@ -30,7 +31,7 @@
     <header class="header" id="top">
       <div class="container header__inner">
         <a class="brand" href="./index.html" aria-label="Suzanne Băile Figa - Home">
-          <span class="brand__mark">S</span>
+          <img class="brand__logo" src="./poze/Logo.jpeg" alt="Suzanne Băile Figa" />
           <span class="brand__text">
             <span class="brand__name">Suzanne</span>
             <span class="brand__sub">Băile Figa</span>
@@ -54,46 +55,134 @@
     <main>
       <!-- HERO -->
       <section class="pageHero" aria-label="Camere Hotel - Hero">
-        <!-- IMPORTANT: schimbă cheia de poză cu una reală din /poze/ -->
-        <div class="pageHero__media" data-img="HotelHero1"></div>
+        <div class="pageHero__media" data-img="SuzanneBaileFigaCamereHotel/ViewExterior"></div>
         <div class="pageHero__overlay"></div>
 
         <div class="container pageHero__content">
           <p class="pageHero__kicker">SUZANNE BĂILE FIGA • CAMERE HOTEL</p>
-          <h1 class="pageHero__title">Camere cu aer condiționat, aproape de stațiune</h1>
-          <p class="pageHero__subtitle">
-            Prețurile afișate sunt pentru <strong>extrasezon</strong>
-          </p>
+          <h1 class="pageHero__title">Camere de hotel, aproape de stațiune</h1>
+        
 
           <div class="pageHero__chips">
-            <span class="pill">AC (toate camerele)</span>
-            <span class="pill">Baie privată</span>
+            <span class="pill">AC</span>
             <span class="pill">TV cu ecran plat</span>
             <span class="pill">Wi-Fi gratuit</span>
-            <span class="pill">Aproape de Băile Figa</span>
+            <span class="pill">Terasă & zonă relaxare</span>
           </div>
 
           <div class="pageHero__actions">
             <a class="btn btn--primary" href="#camere">Vezi camerele</a>
-            <a class="btn btn--ghost" href="#contact">Contact</a>
+            <a class="btn btn--ghost" href="#facilitati">Terasă & Relaxare</a>
           </div>
         </div>
       </section>
+      <!-- FACILITATI: TERASA + RELAXARE (CIUBAR/BBQ) -->
+      <section class="section section--alt" id="facilitati">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title">Terasă & Relaxare</h2>
+            <p class="section__desc">Terasă cu view + zonă de relaxare cu ciubăr și BBQ</p>
+          </div>
 
+          <div class="roomList">
+            <!-- Terasa -->
+            <article class="room">
+              <div class="room__media" data-img="SuzanneBaileFigaCamereHotel/ViewTerasa"></div>
+
+              <div class="room__body">
+                <div class="room__top">
+                  <h3 class="room__title">Terasă cu view</h3>
+                  <div class="room__price">
+                    <span class="room__priceMain">Relaxare</span>
+                    <span class="room__priceSub"> aer curat • priveliște</span>
+                  </div>
+                </div>
+
+                <p class="room__text">
+                  Locul perfect pentru cafeaua de dimineață sau un apus fain. Terasă spațioasă, vibe de vacanță și poze superbe din complex.
+                </p>
+
+                <div class="room__meta">
+                  <div class="room__badge">Terasă</div>
+                  <div class="room__badge">View</div>
+                  <div class="room__badge">Spațiu de relaxare</div>
+                </div>
+
+                <div class="room__bottom">
+                  <div class="room__stock">Galerie <strong></strong> fotografii</div>
+                  <button
+                    class="room__ctaBtn"
+                    type="button"
+                    data-open-room="hotel-terasa"
+                    data-room-title="Terasă cu view"
+                    data-room-price="Galerie terasă • Suzanne Băile Figa"
+                    data-room-stock="6 fotografii"
+                    data-room-features="terasă,view,spațiu de relaxare"
+                    data-room-desc="Terasă cu view — un loc excelent pentru relaxare, poze și momente liniștite. Aici simți cel mai bine vibe-ul de vacanță."
+                    data-images="SuzanneBaileFigaCamereHotel/ViewTerasa,SuzanneBaileFigaCamereHotel/Terasa2,SuzanneBaileFigaCamereHotel/Terasa3,SuzanneBaileFigaCamereHotel/Terasa4,SuzanneBaileFigaCamereHotel/Terasa5,SuzanneBaileFigaCamereHotel/Terasa1"
+                  >
+                    Vezi galeria →
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Relaxare: ciubar + bbq -->
+            <article class="room room--reverse">
+              <div class="room__media" data-img="SuzanneBaileFigaCamereHotel/CiubarView2"></div>
+
+              <div class="room__body">
+                <div class="room__top">
+                  <h3 class="room__title">Zonă relaxare: Ciubăr & BBQ</h3>
+                  <div class="room__price">
+                    <span class="room__priceMain">Chill</span>
+                    <span class="room__priceSub"> ciubăr • grătar</span>
+                  </div>
+                </div>
+
+                <p class="room__text">
+                  După o zi la Băile Figa, te așteaptă zona de relaxare: ciubăr pentru destindere și spațiu BBQ pentru seri faine în gașcă.
+                </p>
+
+                <div class="room__meta">
+                  <div class="room__badge">Ciubăr</div>
+                  <div class="room__badge">BBQ</div>
+                  <div class="room__badge">Relaxare</div>
+                </div>
+
+                <div class="room__bottom">
+                  <div class="room__stock">Galerie <strong></strong> fotografii</div>
+                  <button
+                    class="room__ctaBtn"
+                    type="button"
+                    data-open-room="hotel-relax"
+                    data-room-title="Zonă relaxare: Ciubăr & BBQ"
+                    data-room-price="Galerie relaxare • Suzanne Băile Figa"
+                    data-room-stock="3 fotografii"
+                    data-room-features="ciubăr,bbq,zona relaxare"
+                    data-room-desc="Zonă relaxare — ciubăr pentru momente de liniște și BBQ pentru seri cu gust bun. Perfect după o zi în stațiune."
+                    data-images="SuzanneBaileFigaCamereHotel/CiubarView2,SuzanneBaileFigaCamereHotel/CiubarView1,SuzanneBaileFigaCamereHotel/bbq"
+                  >
+                    Vezi galeria →
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
       <!-- ROOMS -->
       <section class="section" id="camere">
         <div class="container">
           <div class="section__head">
             <h2 class="section__title">Camere & tarife</h2>
-            <p class="section__desc">
-              Preț extrasezon
-            </p>
+            <p class="section__desc">Preț extrasezon</p>
           </div>
 
           <div class="roomList">
             <!-- 1) Camera Deluxe -->
             <article class="room">
-              <div class="room__media" data-img="HotelCameraDeluxe1"></div>
+              <div class="room__media" data-img="SuzanneBaileFigaCamereHotel/CameraDeluxe/Dormitor"></div>
 
               <div class="room__body">
                 <div class="room__top">
@@ -105,12 +194,11 @@
                 </div>
 
                 <p class="room__text">
-                  Cameră modernă, curată și foarte practică pentru un sejur la Băile Figa. Confort bun, aer condiționat și dotări complete.
+                  Cameră modernă, luminoasă și foarte practică pentru un sejur la Băile Figa. Aer condiționat, baie privată și confort “fără bătăi de cap”.
                 </p>
 
                 <div class="room__meta">
                   <div class="room__badge">AC</div>
-                  <div class="room__badge">Baie privată</div>
                   <div class="room__badge">TV</div>
                   <div class="room__badge">Wi-Fi</div>
                 </div>
@@ -122,11 +210,11 @@
                     type="button"
                     data-open-room="hotel-deluxe"
                     data-room-title="Cameră Deluxe"
-                    data-room-price="220 lei / noapte • extrasezon (în sezon: ~300 lei)"
+                    data-room-price="220 lei / noapte • extrasezon"
                     data-room-stock="7 camere disponibile"
-                    data-room-features="AC,baie privată,TV cu ecran plat,Wi-Fi gratuit"
-                    data-room-desc="Cameră Deluxe la Hotel Suzanne Băile Figa — alegerea ideală dacă vrei AC și confort, aproape de stațiune. Cameră simplă, curată, cu baie privată și dotări complete pentru un sejur fără stres."
-                    data-images="HotelCameraDeluxe1,HotelCameraDeluxe2,HotelCameraDeluxe3,HotelBaie1,HotelBaie2"
+                    data-room-features="AC,TV cu ecran plat,Wi-Fi gratuit"
+                    data-room-desc="Cameră Deluxe la Hotel Suzanne Băile Figa — Oaspeții vor găsi în chicinetă o plită, un frigider, ustensile de bucătărie și un cuptor cu microunde. Camera dublă pune la dispoziție și un grătar. Această cameră dublă cu aer condiționat include un TV cu ecran plat și canale prin satelit, o baie privată, precum și o terasă cu vedere la piscină. Unitatea are 1 pat."
+                    data-images="SuzanneBaileFigaCamereHotel/CameraDeluxe/Dormitor,SuzanneBaileFigaCamereHotel/CameraDeluxe/Baie,SuzanneBaileFigaCamereHotel/CameraDeluxe/Baie2,SuzanneBaileFigaCamereHotel/CameraDeluxe/Hol"
                   >
                     Vezi detalii →
                   </button>
@@ -136,7 +224,7 @@
 
             <!-- 2) Camera triplă cu balcon -->
             <article class="room room--reverse">
-              <div class="room__media" data-img="HotelCameraTriplaBalcon1"></div>
+              <div class="room__media" data-img="SuzanneBaileFigaCamereHotel/CameraTriplaCuBalcon/Dormitor1"></div>
 
               <div class="room__body">
                 <div class="room__top">
@@ -148,13 +236,12 @@
                 </div>
 
                 <p class="room__text">
-                  Cameră spațioasă pentru 3 persoane, cu balcon și aer condiționat. Perfectă pentru familie mică sau prieteni.
+                  Spațioasă și perfectă pentru 3 persoane, cu balcon și vedere plăcută. Ideală pentru familie mică sau prieteni.
                 </p>
 
                 <div class="room__meta">
                   <div class="room__badge">AC</div>
                   <div class="room__badge">Balcon</div>
-                  <div class="room__badge">Baie privată</div>
                   <div class="room__badge">Wi-Fi</div>
                 </div>
 
@@ -165,11 +252,11 @@
                     type="button"
                     data-open-room="hotel-tripla-balcon"
                     data-room-title="Cameră triplă cu balcon"
-                    data-room-price="300 lei / noapte • extrasezon (în sezon: ~400 lei)"
+                    data-room-price="300 lei / noapte • extrasezon"
                     data-room-stock="2 camere disponibile"
-                    data-room-features="AC,balcon,baie privată,TV cu ecran plat,Wi-Fi gratuit"
-                    data-room-desc="Cameră triplă cu balcon — aer condiționat, balcon și spațiu bun pentru 3 persoane. Ideală dacă vrei un plus de lumină, aer și vibe de vacanță."
-                    data-images="HotelCameraTriplaBalcon1,HotelCameraTriplaBalcon2,HotelCameraTriplaBalcon3,HotelCameraTriplaBalcon4,HotelBaie1,HotelBaie2"
+                    data-room-features="AC,balcon,TV cu ecran plat,Wi-Fi gratuit"
+                    data-room-desc="Cameră triplă cu balcon — Oaspeții vor găsi în chicineta bine utilată o plită, un frigider, ustensile de bucătărie și un cuptor cu microunde. Camera triplă include și un grătar. Această cameră triplă cu aer condiționat este dotată cu TV cu ecran plat și servicii de streaming, baie privată, precum și o terasă cu vedere la piscină. Unitatea are 2 paturi."
+                    data-images="SuzanneBaileFigaCamereHotel/CameraTriplaCuBalcon/Dormitor1,SuzanneBaileFigaCamereHotel/CameraTriplaCuBalcon/Dormitor2,SuzanneBaileFigaCamereHotel/CameraTriplaCuBalcon/Balcon1,SuzanneBaileFigaCamereHotel/CameraTriplaCuBalcon/Balcon2,SuzanneBaileFigaCamereHotel/CameraTriplaCuBalcon/Balcon3,SuzanneBaileFigaCamereHotel/CameraTriplaCuBalcon/ViewBalcon,SuzanneBaileFigaCamereHotel/CameraTriplaCuBalcon/Baie1,SuzanneBaileFigaCamereHotel/CameraTriplaCuBalcon/Baie2,SuzanneBaileFigaCamereHotel/CameraTriplaCuBalcon/Baie3"
                   >
                     Vezi detalii →
                   </button>
@@ -179,7 +266,7 @@
 
             <!-- 3) Studio de familie -->
             <article class="room">
-              <div class="room__media" data-img="HotelStudioFamilie1"></div>
+              <div class="room__media" data-img="SuzanneBaileFigaCamereHotel/StudioDeFamilie/Living"></div>
 
               <div class="room__body">
                 <div class="room__top">
@@ -191,13 +278,12 @@
                 </div>
 
                 <p class="room__text">
-                  Studio mai mare pentru familie, cu AC și confort “ca acasă”. Super dacă stai mai multe zile.
+                  Studio mai mare, foarte potrivit pentru familie: zonă de relaxare + bucătărie, spațiu bun și confort “ca acasă”.
                 </p>
 
                 <div class="room__meta">
                   <div class="room__badge">AC</div>
-                  <div class="room__badge">Spațios</div>
-                  <div class="room__badge">Baie privată</div>
+                  <div class="room__badge">Bucătărie</div>
                   <div class="room__badge">Wi-Fi</div>
                 </div>
 
@@ -208,26 +294,20 @@
                     type="button"
                     data-open-room="hotel-studio"
                     data-room-title="Studio de familie"
-                    data-room-price="400 lei / noapte • extrasezon (în sezon: ~500 lei)"
+                    data-room-price="400 lei / noapte • extrasezon"
                     data-room-stock="1 studio disponibil"
-                    data-room-features="AC,studio de familie,baie privată,TV cu ecran plat,Wi-Fi gratuit"
-                    data-room-desc="Studio de familie — varianta cea mai bună dacă vrei mai mult spațiu și confort. Aer condiționat, baie privată și dotări complete, potrivit pentru familie."
-                    data-images="HotelStudioFamilie1,HotelStudioFamilie2,HotelStudioFamilie3,HotelBaie1,HotelBaie2"
+                    data-room-features="AC,studio de familie,bucătărie,TV cu ecran plat,Wi-Fi gratuit"
+                    data-room-desc="Studio de familie — varianta ideală dacă vrei mai mult spațiu și o zonă de relaxare. Oaspeții vor găsi în bucătărie o plită, un frigider, ustensile de bucătărie și un cuptor cu microunde. Studioul include și un grătar. Acest studio cu aer condiționat este dotat cu TV cu ecran plat și servicii de streaming, baie privată, precum și o terasă cu vedere la piscină. Unitatea are 2 paturi."
+                    data-images="SuzanneBaileFigaCamereHotel/StudioDeFamilie/Living,SuzanneBaileFigaCamereHotel/StudioDeFamilie/Living2,SuzanneBaileFigaCamereHotel/StudioDeFamilie/Bucatarie1,SuzanneBaileFigaCamereHotel/StudioDeFamilie/Dormitor1,SuzanneBaileFigaCamereHotel/StudioDeFamilie/Dormitor2,SuzanneBaileFigaCamereHotel/StudioDeFamilie/Dormitor3,SuzanneBaileFigaCamereHotel/StudioDeFamilie/Baie1,SuzanneBaileFigaCamereHotel/StudioDeFamilie/Baie2"
                   >
                     Vezi detalii →
                   </button>
                 </div>
               </div>
             </article>
-          </div>
-
-          <div class="noteBar">
-            <p class="noteBar__text">
-              * Prețurile afișate sunt pentru extrasezon. În sezon: Deluxe ~300 lei, Triplă cu balcon ~400 lei, Studio ~500 lei.
-            </p>
-          </div>
-        </div>
       </section>
+
+
 
       <!-- CONTACT -->
       <section class="section section--alt" id="contact">
@@ -236,23 +316,21 @@
             <h2 class="contactSimple__title">Contact</h2>
 
             <div class="contactSimple__phones">
-              <a class="contactSimple__phone" href="tel:+40748108143">0748 108 143</a>
               <a class="contactSimple__phone" href="tel:+40755604463">0755 604 463</a>
+              <a class="contactSimple__phone" href="tel:+40748108143">0748 108 143</a>
             </div>
 
             <div class="contactSimple__buttons">
-              <a class="chipBtn" href="https://wa.me/40748108143" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-              <a class="chipBtn" href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
-              <a class="chipBtn" href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
-              <a class="chipBtn" href="#" target="_blank" rel="noopener noreferrer">TikTok</a>
+              <a class="chipBtn" href="https://wa.me/40755 604 463" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              <a class="chipBtn" href="https://www.instagram.com/cazaresuzanne?igsh=MXh0eHEyYTVycHlrcA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a class="chipBtn" href="https://www.facebook.com/profile.php?id=61587376957999" target="_blank" rel="noopener noreferrer">Facebook</a>
+              <a class="chipBtn" href="https://www.tiktok.com/@suzanne_cazare?_r=1&_t=ZN-93gCoedaLOY" target="_blank" rel="noopener noreferrer">TikTok</a>
+              <a class="chipBtn" href="https://www.booking.com/hotel/ro/pensiunea-suzanne-baile-figa.ro.html?label=ro-ro-booking-desktop-LNohG83GXptcOuYmW1foQQS652796014449%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9051353%3Ali%3Adec%3Adm&gclid=Cj0KCQiAnJHMBhDAARIsABr7b85vSlmzUNE09jy8hUnjJD24ROsCAdfJ01oJnw57-wVFcYxNqZo8s8UaAnoSEALw_wcB&aid=2311236&ucfs=1&arphpl=1&checkin=2026-06-12&checkout=2026-06-13" target="_blank" rel="noopener noreferrer">Booking</a>
             </div>
-
-            <p class="contactSimple__hint">
-              * Înlocuiește link-urile social media cu cele reale.
-            </p>
           </div>
         </div>
       </section>
+
 
       <!-- MODAL (booking style) -->
       <div class="modal" id="roomModal" aria-hidden="true">
@@ -289,7 +367,7 @@
 
               <div class="modal__actions">
                 <a class="btn btn--primary" href="#contact" data-modal-close>Sună pentru rezervare</a>
-                <a class="btn btn--ghost" href="tel:+40748108143">0748 108 143</a>
+                <a class="btn btn--ghost" href="tel:+40755604463">0755 604 463</a>
               </div>
             </div>
           </div>
@@ -300,11 +378,9 @@
     <footer class="footer">
       <div class="container footer__inner">
         <p>© <span id="year"></span> Suzanne Băile Figa</p>
-        <a class="footer__top" href="#top">Sus ↑</a>
       </div>
     </footer>
 
-    <!-- Script identic ca la pensiune (images + modal + keyboard) -->
     <script>
       (function() {
         const yearEl = document.getElementById("year");
@@ -346,6 +422,8 @@
           if(cache.has(key)) return cache.get(key);
 
           const candidates = [key];
+
+          // dacă nu se termină în cifră, mai încercăm și cu "1" (dar păstrăm cheia originală prima)
           if(!/\d$/.test(key)) candidates.push(`${key}1`);
 
           const trimmed = String(key).trim();
@@ -377,7 +455,7 @@
 
         hydrateDataImages();
 
-        // ===== ROOM MODAL =====
+        // ===== MODAL =====
         const modal = document.getElementById("roomModal");
         if(!modal) return;
 

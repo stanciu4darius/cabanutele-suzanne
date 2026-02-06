@@ -9,28 +9,30 @@
 
   <body>
     <!-- TOPBAR -->
-    <header class="topbar">
+     <header class="topbar">
       <div class="container topbar__inner">
         <div class="topbar__left">
           <span class="topbar__label">Rezervări:</span>
-          <a class="topbar__phone" href="tel:+40748108143">0748 108 143</a>
-          <span class="topbar__sep">•</span>
           <a class="topbar__phone" href="tel:+40755604463">0755 604 463</a>
+          <span class="topbar__sep">•</span>
+          <a class="topbar__phone" href="tel:+40748108143">0748 108 143</a>
         </div>
 
         <div class="topbar__right">
-          <a class="topbar__social" href="#" aria-label="Facebook">Facebook</a>
-          <a class="topbar__social" href="#" aria-label="Instagram">Instagram</a>
-          <a class="topbar__social" href="#" aria-label="TikTok">TikTok</a>
+          <a class="topbar__social" href="https://wa.me/40755 604 463" aria-label="WhatsApp">WhatsApp</a>
+          <a class="topbar__social" href="https://www.facebook.com/profile.php?id=61587376957999" aria-label="Facebook">Facebook</a>
+          <a class="topbar__social" href="https://www.instagram.com/cazaresuzanne?igsh=MXh0eHEyYTVycHlrcA%3D%3D&utm_source=qr" aria-label="Instagram">Instagram</a>
+          <a class="topbar__social" href="https://www.tiktok.com/@suzanne_cazare?_r=1&_t=ZN-93gCoedaLOY" aria-label="TikTok">TikTok</a>
         </div>
       </div>
     </header>
 
+
     <!-- HEADER -->
-    <header class="header" id="top">
+   <header class="header" id="top">
       <div class="container header__inner">
         <a class="brand" href="./index.html" aria-label="Suzanne Băile Figa - Home">
-          <span class="brand__mark">S</span>
+          <img class="brand__logo" src="./poze/Logo.jpeg" alt="Suzanne Băile Figa" />
           <span class="brand__text">
             <span class="brand__name">Suzanne</span>
             <span class="brand__sub">Băile Figa</span>
@@ -44,10 +46,9 @@
         <nav class="nav" id="nav">
           <a class="nav__link" href="./camere-hotel.html">Suzanne Băile Figa • Camere Hotel</a>
           <a class="nav__link" href="./pensiune.html">Pensiunea Suzanne Băile Figa</a>
-          <a class="nav__link" href="./terasa-spa.html">Băile Figa • Terasă Spa Cazare</a>
+          <a class="nav__link" href="./terasa-spa-cazare.html">Băile Figa • Terasă Spa Cazare</a>
           <a class="nav__link" href="./cabana.html">Cabana Suzanne Băile Figa</a>
           <a class="nav__link" href="./casute.html">Căsuțe Suzanne Băile Figa</a>
-          <a class="nav__link is-active" href="./legacy-spa.html">Legacy Spa</a>
         </nav>
       </div>
     </header>
@@ -55,116 +56,170 @@
     <main>
       <!-- HERO -->
       <section class="pageHero" aria-label="Legacy Spa - Hero">
-        <div class="pageHero__media" data-img="legacy_cover"></div>
+        <!-- Folder: ./poze/Legacy/ -->
+        <div class="pageHero__media" data-img="Exterior1"></div>
         <div class="pageHero__overlay"></div>
 
         <div class="container pageHero__content">
           <p class="pageHero__kicker">LEGACY SPA • BECLEAN</p>
-          <h1 class="pageHero__title">O zi de SPA, ca la resort</h1>
+          <h1 class="pageHero__title">Relaxare, înot și activități • 12 luni pe an</h1>
           <p class="pageHero__subtitle">
-            Piscine interioare, zonă de relaxare și activități pentru toate vârstele.
-            Perfect când vrei să îți încarci bateriile, indiferent de sezon.
+            Centru recreativ multifuncțional: bazine interioare, zonă de relaxare, fitness și bowling.
+            O experiență completă pentru familii, prieteni și comunitate.
           </p>
 
           <div class="pageHero__chips">
             <span class="pill">Piscine</span>
-            <span class="pill">Saune / Relax</span>
-            <span class="pill">Bowling</span>
+            <span class="pill">Apă sărată</span>
+            <span class="pill">Relax & wellness</span>
             <span class="pill">Fitness</span>
+            <span class="pill">Bowling</span>
           </div>
 
           <div class="pageHero__actions">
-            <a class="btn btn--primary" href="#ce-primesti">Ce primești</a>
-            <a class="btn btn--ghost" href="#program">Program & tarife</a>
+            <a class="btn btn--primary" href="#galerie">Vezi poze</a>
+            <a class="btn btn--ghost" href="#tarife">Tarife & program</a>
           </div>
         </div>
       </section>
 
-      <!-- WHAT YOU GET -->
-      <section class="section" id="ce-primesti">
+      <!-- INTRO -->
+      <section class="section" id="despre">
         <div class="container">
           <div class="section__head">
-            <h2 class="section__title">Ce primești la Legacy Spa</h2>
+            <h2 class="section__title">Despre Centrul Recreativ Legacy</h2>
             <p class="section__desc">
-              Un mix foarte bun între relaxare (SPA) + distracție (bowling) + mișcare (fitness).
+              Un spațiu modern, gândit pentru relaxare, mișcare și timp de calitate – pentru Beclean și împrejurimi.
+            </p>
+          </div>
+
+          <div class="infoGrid">
+            <article class="infoCard">
+              <h3 class="infoCard__title">Misiune</h3>
+              <p class="infoText">
+                Obiectivul principal este îmbunătățirea calității vieții prin activități de petrecere calitativă a timpului liber,
+                inclusiv sprijin pentru revitalizarea fizică, economică și socială a comunităților.
+              </p>
+            </article>
+
+            <article class="infoCard">
+              <h3 class="infoCard__title">Acces gratuit (categorii sociale)</h3>
+              <p class="infoText">
+                Acces gratuit pentru beneficiarii din anumite categorii sociale din localitățile din GAL Ținutul Haiducilor
+                (conform evaluărilor Direcției de Asistență Socială).
+              </p>
+            </article>
+
+            <article class="infoCard">
+              <h3 class="infoCard__title">12 luni/an</h3>
+              <p class="infoText">
+                Activități disponibile pe tot parcursul anului, fără întrerupere – indiferent de sezon.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- HERO STRIP (Exterior + vibe) -->
+      <section class="section section--alt" aria-label="Vibe Legacy">
+        <div class="container">
+          <div class="splitHero">
+            <div class="splitHero__left" data-img="Exterior2"></div>
+            <div class="splitHero__right">
+              <h2 class="splitHero__title">Un loc “ca la resort”</h2>
+              <p class="splitHero__text">
+                Modern, curat și bine organizat, Legacy îți oferă bazin de înot (recreativ și recuperare), bazin cu jocuri în apă,
+                bazin cu apă sărată și zone de relaxare – plus activități pentru întreaga familie.
+              </p>
+
+         
+
+              <div class="splitHero__actions">
+                <a class="btn btn--primary" href="#facilitati">Vezi facilitățile</a>
+                <a class="btn btn--ghost" href="#locatie">Locație</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FACILITIES (premium cards) -->
+      <section class="section" id="facilitati">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title">Facilități & activități</h2>
+            <p class="section__desc">
+              Un centru multifuncțional: apă, mișcare, relaxare, educație și spații exterioare.
             </p>
           </div>
 
           <div class="featureGrid">
-            <article class="featureCard" data-img="legacy_pool">
+            <article class="featureCard" data-img="Piscine1">
               <div class="featureCard__overlay"></div>
               <div class="featureCard__content">
-                <h3>Piscine interioare</h3>
-                <p>Înot, relaxare și timp de calitate, indiferent de vreme.</p>
+                <h3>Piscină interioară</h3>
+                <p>Înot cu funcții recreative și de recuperare – perfect pentru o zi completă.</p>
               </div>
             </article>
 
-            <article class="featureCard" data-img="legacy_sauna">
+            <article class="featureCard" data-img="Piscine2">
               <div class="featureCard__overlay"></div>
               <div class="featureCard__content">
-                <h3>Zonă wellness</h3>
-                <p>Saună / relaxare – genul de pauză de care chiar aveai nevoie.</p>
+                <h3>Distracție în apă</h3>
+                <p>Bazin cu jocuri în apă – super pentru familii și grupuri.</p>
               </div>
             </article>
 
-            <article class="featureCard" data-img="legacy_salt">
+            <article class="featureCard" data-img="Exterior1">
               <div class="featureCard__overlay"></div>
               <div class="featureCard__content">
-                <h3>Salină</h3>
-                <p>Atmosferă calmă, perfectă pentru “reset” și respirație ușoară.</p>
+                <h3>Zonă de relaxare</h3>
+                <p>Atmosferă de SPA: timp pentru tine, pauză reală, reset.</p>
               </div>
             </article>
 
-            <article class="featureCard" data-img="legacy_bowling">
+            <article class="featureCard" data-img="Exterior2">
               <div class="featureCard__overlay"></div>
               <div class="featureCard__content">
-                <h3>Bowling</h3>
-                <p>Ideal pentru familie / prieteni – o oră de distracție garantată.</p>
+                <h3>Spații verzi & exterior</h3>
+                <p>Zone exterioare amenajate și mobilier urban în limita terenului.</p>
               </div>
             </article>
 
-            <article class="featureCard" data-img="legacy_fitness">
+            <article class="featureCard" data-img="Piscine1">
               <div class="featureCard__overlay"></div>
               <div class="featureCard__content">
-                <h3>Fitness</h3>
-                <p>Mișcare ușoară înainte de SPA sau după – fix cât vrei tu.</p>
+                <h3>Mișcare & tonus</h3>
+                <p>Sală de fitness + recuperare fizică + yoga (în cadrul centrului).</p>
               </div>
             </article>
 
-            <article class="featureCard" data-img="legacy_kids">
+            <article class="featureCard" data-img="Piscine2">
               <div class="featureCard__overlay"></div>
               <div class="featureCard__content">
-                <h3>Și pentru copii</h3>
-                <p>Opțiuni prietenoase pentru familii – să fie bine pentru toți.</p>
+                <h3>Bowling & timp cu prietenii</h3>
+                <p>Ideal pentru distracție – poți merge și doar la bowling, fără bilet de intrare.</p>
               </div>
             </article>
           </div>
 
-          <div class="highlightRow">
-            <div class="highlight">
-              <div class="highlight__big">SPA</div>
-              <div class="highlight__small">Relaxare & refacere</div>
-            </div>
-            <div class="highlight">
-              <div class="highlight__big">BOWLING</div>
-              <div class="highlight__small">Distracție cu prietenii</div>
-            </div>
-            <div class="highlight">
-              <div class="highlight__big">FITNESS</div>
-              <div class="highlight__small">Energie & tonus</div>
-            </div>
+          <div class="noteBar">
+            <p class="noteBar__text">
+              În cadrul centrului sunt amenajate și alte dotări: sală gimnastică (cu terasă în aer liber), bibliotecă, ateliere creative,
+              spațiu expozițional, locuri de joacă pentru copii și spații verzi exterioare.
+            </p>
           </div>
         </div>
       </section>
 
+    
+
       <!-- PROGRAM & TICKETS -->
-      <section class="section section--alt" id="program">
+      <section class="section" id="tarife">
         <div class="container">
           <div class="section__head">
-            <h2 class="section__title">Program & tarife (oficial)</h2>
-            <p class="section__desc">
-              Informații utile înainte să pleci de acasă.
-            </p>
+            <h2 class="section__title">Tarife & program</h2>
+            <p class="section__desc">Informații utile înainte să pleci de acasă.</p>
           </div>
 
           <div class="infoGrid">
@@ -178,22 +233,56 @@
             </article>
 
             <article class="infoCard">
-              <h3 class="infoCard__title">Tarife</h3>
+              <h3 class="infoCard__title">Tarife bilete</h3>
               <ul class="infoList">
-                <li><strong>Adult:</strong> 60 lei / zi</li>
-                <li><strong>Copil (până la 14 ani):</strong> 30 lei / zi</li>
-                <li><strong>Garanție brățară:</strong> +20 lei (returnabilă la ieșire)</li>
-                <li><strong>Bowling:</strong> 50 lei / oră</li>
+                <li><strong>Adult:</strong> 60 lei / zi (indiferent de câte ore în program)</li>
+                <li><strong>Copil 0–14 ani:</strong> 30 lei / zi (indiferent de câte ore în program)</li>
+                <li><strong>Abonament:</strong> 400 lei / lună (fără taxa bowling)</li>
               </ul>
             </article>
 
             <article class="infoCard">
-              <h3 class="infoCard__title">Telefon recepție (Legacy)</h3>
-              <p class="infoBig">
-                <a href="tel:+40747299653">0747 299 653</a>
+              <h3 class="infoCard__title">Bowling</h3>
+              <ul class="infoList">
+                <li><strong>Taxa bowling:</strong> 50 lei / joc</li>
+                <li><strong>Important:</strong> intrarea la bowling se poate face fără taxa de intrare</li>
+              </ul>
+              <p class="infoHint">Recomandat pentru familie / prieteni – super seara.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FUNDING / CONTEXT -->
+      <section class="section section--alt" id="context">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title">Context & dezvoltare</h2>
+            <p class="section__desc">Un proiect major pentru comunitate.</p>
+          </div>
+
+          <div class="infoGrid">
+            <article class="infoCard">
+              <h3 class="infoCard__title">Investiție</h3>
+              <p class="infoText">
+                Centrul Recreativ Legacy a fost construit de Primăria Beclean cu ajutorul unei finanțări în cadrul Programului Operațional
+                Regional 2014–2020, în valoare totală de <strong>22.709.102,47 lei</strong> (Cod SMIS 123130).
               </p>
-              <p class="infoHint">
-                Pentru confirmare rapidă (aglomerație, program special, detalii).
+            </article>
+
+            <article class="infoCard">
+              <h3 class="infoCard__title">Ce s-a realizat</h3>
+              <p class="infoText">
+                Lucrări de construcție, amenajare accese și infrastructură, drumuri, spații verzi și activități exterioare, plus instalații
+                sanitare și electrice, avertizare incendiu și montaj echipamente.
+              </p>
+            </article>
+
+            <article class="infoCard">
+              <h3 class="infoCard__title">Beneficii</h3>
+              <p class="infoText">
+                Activități pentru sănătate și timp liber, sprijin pentru revitalizarea comunităților și posibilitatea de a practica înotul
+                și alte activități pe tot parcursul anului.
               </p>
             </article>
           </div>
@@ -205,9 +294,7 @@
         <div class="container">
           <div class="section__head">
             <h2 class="section__title">Locație</h2>
-            <p class="section__desc">
-              Deschide direct în Google Maps și pornește navigarea.
-            </p>
+            <p class="section__desc">Deschide direct în Google Maps și pornește navigarea.</p>
           </div>
 
           <div class="mapCard">
@@ -225,8 +312,12 @@
               <p>Ideal pentru o zi de relaxare, în orice anotimp.</p>
 
               <div class="mapCard__actions">
-                <a class="btn btn--primary" target="_blank" rel="noopener noreferrer"
-                  href="https://www.google.com/maps/search/?api=1&query=Centrul%20Recreativ%20Legacy%20Beclean">
+                <a
+                  class="btn btn--primary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.google.com/maps/search/?api=1&query=Centrul%20Recreativ%20Legacy%20Beclean"
+                >
                   Deschide în Google Maps
                 </a>
                 <a class="btn btn--ghost" href="./index.html">Înapoi la Home</a>
@@ -260,6 +351,48 @@
           </div>
         </div>
       </section>
+
+      <!-- MODAL (gallery style) -->
+      <div class="modal" id="roomModal" aria-hidden="true">
+        <div class="modal__backdrop" data-modal-close></div>
+
+        <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+          <button class="modal__close" type="button" aria-label="Închide" data-modal-close>×</button>
+
+          <div class="modal__grid">
+            <div class="modal__left">
+              <div class="modal__viewer">
+                <button class="modal__nav modal__nav--prev" type="button" aria-label="Anterior">‹</button>
+                <div class="modal__image" id="modalImage"></div>
+                <button class="modal__nav modal__nav--next" type="button" aria-label="Următor">›</button>
+              </div>
+
+              <div class="modal__thumbs" id="modalThumbs"></div>
+            </div>
+
+            <div class="modal__right">
+              <h3 class="modal__title" id="modalTitle"></h3>
+              <div class="modal__sub" id="modalSub"></div>
+
+              <div class="modal__badges" id="modalBadges"></div>
+
+              <p class="modal__desc" id="modalDesc"></p>
+
+              <div class="modal__info">
+                <div class="modal__infoRow">
+                  <span class="modal__infoLabel">Info</span>
+                  <span class="modal__infoValue" id="modalStock"></span>
+                </div>
+              </div>
+
+              <div class="modal__actions">
+                <a class="btn btn--primary" href="#tarife" data-modal-close>Vezi tarife</a>
+                <a class="btn btn--ghost" href="#locatie" data-modal-close>Vezi locație</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer class="footer">
@@ -269,6 +402,192 @@
       </div>
     </footer>
 
-    <script src="./script.js"></script>
+    <script>
+      (function() {
+        const yearEl = document.getElementById("year");
+        if(yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+        const navToggle = document.getElementById("navToggle");
+        const nav = document.getElementById("nav");
+        if(navToggle && nav) {
+          navToggle.addEventListener("click", () => {
+            const expanded = navToggle.getAttribute("aria-expanded") === "true";
+            navToggle.setAttribute("aria-expanded", String(!expanded));
+            nav.classList.toggle("is-open");
+          });
+        }
+
+        const BASE = "./poze/Legacy";
+        const exts = ["jpg", "jpeg", "png", "webp"];
+        const cache = new Map();
+
+        function setBg(el, url) {
+          if(!el) return;
+          if(!url) {
+            el.style.backgroundImage = "none";
+            return;
+          }
+          el.style.backgroundImage = `url("${url}")`;
+        }
+
+        function imgExists(url) {
+          return new Promise((resolve) => {
+            const img = new Image();
+            img.onload = () => resolve(true);
+            img.onerror = () => resolve(false);
+            img.src = url;
+          });
+        }
+
+        async function resolveImageUrl(key) {
+          if(!key) return null;
+          if(cache.has(key)) return cache.get(key);
+
+          const candidates = [key];
+          if(!/\d$/.test(key) && !key.includes("/")) candidates.push(`${key}1`);
+
+          const trimmed = String(key).trim();
+          if(trimmed !== key) candidates.push(trimmed);
+
+          for(const cand of candidates) {
+            for(const ext of exts) {
+              const url = `${BASE}/${cand}.${ext}`;
+              const ok = await imgExists(url);
+              if(ok) {
+                cache.set(key, url);
+                return url;
+              }
+            }
+          }
+
+          cache.set(key, null);
+          return null;
+        }
+
+        async function hydrateDataImages() {
+          const els = Array.from(document.querySelectorAll("[data-img]"));
+          for(const el of els) {
+            const key = el.getAttribute("data-img");
+            const url = await resolveImageUrl(key);
+            setBg(el, url);
+          }
+        }
+
+        hydrateDataImages();
+
+        // ===== MODAL =====
+        const modal = document.getElementById("roomModal");
+        if(!modal) return;
+
+        const modalImage = document.getElementById("modalImage");
+        const modalThumbs = document.getElementById("modalThumbs");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalSub = document.getElementById("modalSub");
+        const modalBadges = document.getElementById("modalBadges");
+        const modalDesc = document.getElementById("modalDesc");
+        const modalStock = document.getElementById("modalStock");
+
+        const btnPrev = modal.querySelector(".modal__nav--prev");
+        const btnNext = modal.querySelector(".modal__nav--next");
+
+        let images = [];
+        let activeIndex = 0;
+
+        function openModal() {
+          modal.classList.add("is-open");
+          modal.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
+        }
+
+        function closeModal() {
+          modal.classList.remove("is-open");
+          modal.setAttribute("aria-hidden", "true");
+          document.body.style.overflow = "";
+          images = [];
+          activeIndex = 0;
+          if(modalThumbs) modalThumbs.innerHTML = "";
+          setBg(modalImage, null);
+        }
+
+        async function renderActive() {
+          if(!images.length) return;
+          const key = images[activeIndex];
+          const url = await resolveImageUrl(key);
+          setBg(modalImage, url);
+
+          const thumbs = Array.from(modalThumbs.querySelectorAll(".modal__thumb"));
+          thumbs.forEach((t, i) => t.classList.toggle("is-active", i === activeIndex));
+        }
+
+        async function buildThumbs() {
+          if(!modalThumbs) return;
+          modalThumbs.innerHTML = "";
+          for(let i = 0; i < images.length; i += 1) {
+            const key = images[i];
+            const url = await resolveImageUrl(key);
+
+            const b = document.createElement("button");
+            b.type = "button";
+            b.className = "modal__thumb" + (i === activeIndex ? " is-active" : "");
+            b.setAttribute("aria-label", `Imagine ${i + 1}`);
+            setBg(b, url);
+
+            b.addEventListener("click", () => {
+              activeIndex = i;
+              renderActive();
+            });
+
+            modalThumbs.appendChild(b);
+          }
+        }
+
+        function next() {
+          if(!images.length) return;
+          activeIndex = (activeIndex + 1) % images.length;
+          renderActive();
+        }
+
+        function prev() {
+          if(!images.length) return;
+          activeIndex = (activeIndex - 1 + images.length) % images.length;
+          renderActive();
+        }
+
+        if(btnNext) btnNext.addEventListener("click", next);
+        if(btnPrev) btnPrev.addEventListener("click", prev);
+
+        function openGallery(btn) {
+          const title = btn.getAttribute("data-gallery-title") || "Galerie";
+          const imgs = btn.getAttribute("data-images") || "";
+
+          if(modalTitle) modalTitle.textContent = title;
+          if(modalSub) modalSub.textContent = "";
+          if(modalStock) modalStock.textContent = "";
+          if(modalDesc) modalDesc.textContent = "";
+          if(modalBadges) modalBadges.innerHTML = "";
+
+          images = imgs.split(",").map(s => s.trim()).filter(Boolean);
+          activeIndex = 0;
+
+          openModal();
+          buildThumbs().then(renderActive);
+        }
+
+        const galleries = Array.from(document.querySelectorAll("[data-open-gallery]"));
+        for(const btn of galleries) {
+          btn.addEventListener("click", () => openGallery(btn));
+        }
+
+        const closers = Array.from(modal.querySelectorAll("[data-modal-close]"));
+        for(const c of closers) c.addEventListener("click", closeModal);
+
+        document.addEventListener("keydown", (e) => {
+          if(!modal.classList.contains("is-open")) return;
+          if(e.key === "Escape") closeModal();
+          if(e.key === "ArrowRight") next();
+          if(e.key === "ArrowLeft") prev();
+        });
+      })();
+    </script>
   </body>
 </html>

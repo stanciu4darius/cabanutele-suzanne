@@ -1919,3 +1919,124 @@ input::placeholder, textarea::placeholder{
     grid-template-columns:1fr;
   }
 }
+.hero__bg {
+  opacity: 0;
+  transition: opacity 900ms ease;
+  will-change: opacity;
+}
+
+.hero__bg.is-show {
+  opacity: 1;
+}
+
+/* dots (dacă nu le ai deja) */
+.hero__dots {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.hero__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.25);
+  cursor: pointer;
+}
+
+.hero__dot.is-active {
+  background: rgba(255,255,255,0.95);
+}
+/* ========== WIDE CARD (clean sections) ========== */
+.wideCard {
+  padding: 34px 0;
+}
+
+.wideCard__grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 26px;
+  align-items: stretch;
+  background: #042d44;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.wideCard--alt .wideCard__grid {
+  background: #042d44;
+}
+
+.wideCard__grid--reverse {
+  grid-template-columns: 0.85fr 1.15fr;
+}
+
+.wideCard__media {
+  min-height: 320px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.wideCard__body {
+  padding: 28px 28px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wideCard__kicker {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  opacity: 0.7;
+  margin: 0 0 10px;
+}
+
+.wideCard__title {
+  margin: 0 0 10px;
+}
+
+.wideCard__text {
+  margin: 0 0 18px;
+  opacity: 0.9;
+  max-width: 48ch;
+}
+
+.wideCard__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* separare vizuală între carduri (să nu pară lipite) */
+.wideCard + .wideCard {
+  margin-top: 10px;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .wideCard__grid,
+  .wideCard__grid--reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .wideCard__media {
+    min-height: 240px;
+  }
+
+  .wideCard__body {
+    padding: 22px;
+  }
+}
+.brand__logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px; /* ca să fie “badge” ca înainte */
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}

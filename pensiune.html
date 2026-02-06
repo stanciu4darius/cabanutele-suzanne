@@ -13,15 +13,16 @@
       <div class="container topbar__inner">
         <div class="topbar__left">
           <span class="topbar__label">Rezervări:</span>
-          <a class="topbar__phone" href="tel:+40748108143">0748 108 143</a>
-          <span class="topbar__sep">•</span>
           <a class="topbar__phone" href="tel:+40755604463">0755 604 463</a>
+          <span class="topbar__sep">•</span>
+          <a class="topbar__phone" href="tel:+40748108143">0748 108 143</a>
         </div>
 
         <div class="topbar__right">
-          <a class="topbar__social" href="#" aria-label="Facebook">Facebook</a>
-          <a class="topbar__social" href="#" aria-label="Instagram">Instagram</a>
-          <a class="topbar__social" href="#" aria-label="TikTok">TikTok</a>
+          <a class="topbar__social" href="https://wa.me/40755 604 463" aria-label="WhatsApp">WhatsApp</a>
+          <a class="topbar__social" href="https://www.facebook.com/profile.php?id=61587376957999" aria-label="Facebook">Facebook</a>
+          <a class="topbar__social" href="https://www.instagram.com/cazaresuzanne?igsh=MXh0eHEyYTVycHlrcA%3D%3D&utm_source=qr" aria-label="Instagram">Instagram</a>
+          <a class="topbar__social" href="https://www.tiktok.com/@suzanne_cazare?_r=1&_t=ZN-93gCoedaLOY" aria-label="TikTok">TikTok</a>
         </div>
       </div>
     </header>
@@ -30,7 +31,7 @@
     <header class="header" id="top">
       <div class="container header__inner">
         <a class="brand" href="./index.html" aria-label="Suzanne Băile Figa - Home">
-          <span class="brand__mark">S</span>
+          <img class="brand__logo" src="./poze/Logo.jpeg" alt="Suzanne Băile Figa" />
           <span class="brand__text">
             <span class="brand__name">Suzanne</span>
             <span class="brand__sub">Băile Figa</span>
@@ -54,15 +55,15 @@
     <main>
       <!-- HERO -->
       <section class="pageHero" aria-label="Pensiunea Suzanne - Hero">
-        <!-- FIX: poza principala = intrare -->
-        <div class="pageHero__media" data-img="PensiuneIntrare"></div>
+        <!-- Copertă: ./poze/PensiuneSuzanneBaileFiga/ViewPensiune2.* -->
+        <div class="pageHero__media" data-img="PensiuneSuzanneBaileFiga/ViewPensiune2"></div>
         <div class="pageHero__overlay"></div>
 
         <div class="container pageHero__content">
           <p class="pageHero__kicker">PENSIUNEA SUZANNE • BĂILE FIGA</p>
           <h1 class="pageHero__title">Camere curate, spațioase, ideale pentru cupluri și familii</h1>
           <p class="pageHero__subtitle">
-            Prețurile afișate sunt pentru <strong>extrasezon</strong>. Aer condiționat apare <strong>doar</strong> la camerele unde este disponibil.
+            Prețurile afișate sunt pentru <strong>extrasezon</strong>
           </p>
 
           <div class="pageHero__chips">
@@ -71,11 +72,101 @@
             <span class="pill">TV cu ecran plat</span>
             <span class="pill">Frigider</span>
             <span class="pill">Încălzire centrală</span>
+            <span class="pill">AC</span>
+            <span class="pill">Ciubăr</span>
           </div>
 
           <div class="pageHero__actions">
             <a class="btn btn--primary" href="#camere">Vezi camerele</a>
-            <a class="btn btn--ghost" href="#contact">Contact</a>
+            <a class="btn btn--ghost" href="#Pensiunea">Vezi Pensiunea</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALERIE (copertă / exterior / ciubăr) -->
+      <section class="section section--alt" id="Pensiunea">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title">Pensiunea</h2>
+            <p class="section__desc">Exterior, curte și zone de relaxare</p>
+          </div>
+
+          <div class="roomList">
+            <article class="room">
+              <div class="room__media" data-img="PensiuneSuzanneBaileFiga/ViewPensiune1"></div>
+              <div class="room__body">
+                <div class="room__top">
+                  <h3 class="room__title">Vedere pensiune</h3>
+                  <div class="room__price">
+                    <span class="room__priceMain">Curte & acces</span>
+                    <span class="room__priceSub">• atmosferă de vacanță</span>
+                  </div>
+                </div>
+                <p class="room__text">
+                  O privire de ansamblu asupra pensiunii și a zonei din jur plus o scurtă descriere — liniște, spațiu și acces rapid către stațiune.
+                </p>
+                <div class="room__meta">
+                  <div class="room__badge">Exterior</div>
+                  <div class="room__badge">Curte</div>
+                </div>
+                <div class="room__bottom">
+                  <div class="room__stock">Foto</div>
+                  <button
+                    class="room__ctaBtn"
+                    type="button"
+                    data-open-room="galerie-1"
+                    data-room-title="Vedere pensiune"
+                    data-room-price="Exterior & curte"
+                    data-room-stock="Galerie"
+                    data-room-features="Exterior,curte,acces"
+                    data-room-desc="Pensiunea Suzanne Băile Figa se află în Beclean. Această proprietate include o bucătărie comună, precum și un grătar. La proprietate există o terasă, iar oaspeții au la dispoziție WiFi gratuit și parcare privată gratuită.
+
+La această pensiune, toate camerele oferă dulap pentru haine, televizor cu ecran plat, baie proprie, lenjerie de pat și prosoape. Baia proprie oferă un duș și un uscător de păr. Toate unitățile includ un frigider.
+
+Zona este populară pentru hiking și ciclism, iar Pensiunea Suzanne Băile Figa oferă închiriere de biciclete."
+                    data-images="PensiuneSuzanneBaileFiga/ViewPensiune1,PensiuneSuzanneBaileFiga/ViewPensiune3,PensiuneSuzanneBaileFiga/ViewPensiune2,PensiuneSuzanneBaileFiga/ViewPensiune4,PensiuneSuzanneBaileFiga/ViewPensiune5,PensiuneSuzanneBaileFiga/ViewPensiune6"
+                  >
+                    Vezi detalii →
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="room room--reverse">
+              <div class="room__media" data-img="PensiuneSuzanneBaileFiga/Ciubar"></div>
+              <div class="room__body">
+                <div class="room__top">
+                  <h3 class="room__title">Zonă relaxare</h3>
+                  <div class="room__price">
+                    <span class="room__priceMain">Ciubăr</span>
+                    <span class="room__priceSub">• relaxare după o zi la băi</span>
+                  </div>
+                </div>
+                <p class="room__text">
+                  O zonă perfectă pentru relaxare, mai ales seara. Ideală pentru grupuri și familii.
+                </p>
+                <div class="room__meta">
+                  <div class="room__badge">Relaxare</div>
+                  <div class="room__badge">Terasă</div>
+                </div>
+                <div class="room__bottom">
+                  <div class="room__stock">Foto</div>
+                  <button
+                    class="room__ctaBtn"
+                    type="button"
+                    data-open-room="galerie-2"
+                    data-room-title="Zonă relaxare"
+                    data-room-price="Ciubăr & curte"
+                    data-room-stock="Galerie"
+                    data-room-features="Relaxare,terasă, ciubăr"
+                    data-room-desc="Zonă de relaxare în curte sau la ciubăr, perfectă după o zi plină"
+                    data-images="PensiuneSuzanneBaileFiga/Ciubar,PensiuneSuzanneBaileFiga/Relax1,PensiuneSuzanneBaileFiga/Relax2,PensiuneSuzanneBaileFiga/Relax3,PensiuneSuzanneBaileFiga/Relax4,PensiuneSuzanneBaileFiga/Relax5"
+                  >
+                    Vezi detalii →
+                  </button>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -85,15 +176,13 @@
         <div class="container">
           <div class="section__head">
             <h2 class="section__title">Camere & tarife</h2>
-            <p class="section__desc">Preț extrasezon </p>
+            <p class="section__desc">Preț extrasezon</p>
           </div>
 
           <div class="roomList">
-
-            <!-- 1) Camera Deluxe -->
+            <!-- 1) Camera Deluxe (folder: CamereDeluxe) -->
             <article class="room">
-              <!-- FIX: in folder exista cameradeluxePensiuneDormitor1 (nu fara 1) -->
-              <div class="room__media" data-img="cameradeluxePensiuneDormitor1"></div>
+              <div class="room__media" data-img="PensiuneSuzanneBaileFiga/CamereDeluxe/Dormitor1"></div>
 
               <div class="room__body">
                 <div class="room__top">
@@ -105,13 +194,11 @@
                 </div>
 
                 <p class="room__text">
-                  Cameră luminoasă și confortabilă, perfectă pentru un sejur relaxat la Băile Figa. Atmosferă liniștită, dotări complete și un vibe “curat, simplu, bun”.
+                  Cameră luminoasă și confortabilă, potrivită pentru un sejur relaxat. Amenajare practică, baie curată și dotări complete.
                 </p>
 
                 <div class="room__meta">
-                  <div class="room__badge">15 m²</div>
                   <div class="room__badge">Baie privată</div>
-                  <div class="room__badge">Chicinetă privată</div>
                   <div class="room__badge">TV</div>
                   <div class="room__badge">Wi-Fi</div>
                 </div>
@@ -121,13 +208,13 @@
                   <button
                     class="room__ctaBtn"
                     type="button"
-                    data-open-room="deluxe"
+                    data-open-room="pensiune-deluxe"
                     data-room-title="Cameră Deluxe"
                     data-room-price="220 lei / noapte • extrasezon"
                     data-room-stock="4 camere disponibile"
-                    data-room-features="15 m²,1 pat dublu mare,baie privată,chicinetă privată,TV cu ecran plat,frigider,Wi-Fi gratuit,izolare fonică,terasă,grătar"
-                    data-room-desc="Cameră Deluxe (ideală pentru 2 adulți + 1 copil), amenajată modern și gândită pentru confort. Dispune de pat dublu mare, baie privată cu duș, televizor cu ecran plat, frigider și Wi-Fi gratuit. Chicinetă privată utilată pentru momentele când vrei ceva rapid, plus zonă de relaxare. O alegere super bună pentru un sejur scurt sau mai lung, aproape de stațiune."
-                    data-images="cameradeluxePensiuneDormitor1,cameradeluxePensiuneDormitor2,cameradeluxePensiuneDormitor3,cameradeluxePensiuneDormitor4,cameradeluxePensiuneDormitor5,cameradeluxePensiuneDormitor6,cameradeluxePensiuneDormitor7,BaieHotel,BaieHotel2,BaieHotel3,BaieHotel4"
+                    data-room-features="Baie privată,TV cu ecran plat,Wi-Fi gratuit"
+                    data-room-desc="Cameră Deluxe — Camera dublă oferă aparat pentru prepararea ceaiului și cafelei, o zonă de relaxare, precum și o baie privată cu duș și uscător de păr. Oaspeții au la dispoziție o chicinetă complet utilată, dotată cu plită, frigider, ustensile de bucătărie și cuptor cu microunde. Camera dublă include și un grătar. Această cameră dublă are intrare privată, pereți izolați fonic, TV cu ecran plat cu servicii de streaming și terasă. Unitatea de cazare include 1 pat."
+                    data-images="PensiuneSuzanneBaileFiga/CamereDeluxe/Dormitor1,PensiuneSuzanneBaileFiga/CamereDeluxe/Dormitor2,PensiuneSuzanneBaileFiga/CamereDeluxe/Dormitor3,PensiuneSuzanneBaileFiga/CamereDeluxe/Baie1,PensiuneSuzanneBaileFiga/CamereDeluxe/Baie2,PensiuneSuzanneBaileFiga/CamereDeluxe/Baie3,PensiuneSuzanneBaileFiga/CamereDeluxe/Baie4"
                   >
                     Vezi detalii →
                   </button>
@@ -135,9 +222,9 @@
               </div>
             </article>
 
-            <!-- 2) Cameră de familie cvadruplă (Booking: “cu baie privată”) -->
+            <!-- 2) Cameră de familie cvadruplă (folder: CameraDeFamilieCvatrupla) -->
             <article class="room room--reverse">
-              <div class="room__media" data-img="cameraDeFamilieCvatrupla1"></div>
+              <div class="room__media" data-img="PensiuneSuzanneBaileFiga/CameraDeFamilieCvatrupla/Dormitor3"></div>
 
               <div class="room__body">
                 <div class="room__top">
@@ -149,13 +236,10 @@
                 </div>
 
                 <p class="room__text">
-                  Spațiu potrivit pentru familie: paturi comode, baie privată și dotări complete pentru un sejur fără stres.
+                  Potrivită pentru familie sau grup mic. Spațiu bine organizat și dotări esențiale pentru un sejur comod.
                 </p>
 
                 <div class="room__meta">
-                  <div class="room__badge">17 m²</div>
-                  <div class="room__badge">Baie privată</div>
-                  <div class="room__badge">Chicinetă privată</div>
                   <div class="room__badge">TV</div>
                   <div class="room__badge">Wi-Fi</div>
                 </div>
@@ -165,13 +249,13 @@
                   <button
                     class="room__ctaBtn"
                     type="button"
-                    data-open-room="cvadrupla"
+                    data-open-room="pensiune-cvadrupla"
                     data-room-title="Cameră de familie cvadruplă"
                     data-room-price="300 lei / noapte • extrasezon"
                     data-room-stock="2 camere disponibile"
-                    data-room-features="17 m²,2 paturi suprapuse,1 pat dublu mare,baie privată,chicinetă privată,TV cu ecran plat,frigider,Wi-Fi gratuit,izolare fonică,terasă,grătar"
-                    data-room-desc="Cameră de familie cvadruplă, ideală pentru familii sau grupuri mici. Camera are două paturi suprapuse și un pat dublu mare, baie privată cu duș, TV cu ecran plat, frigider și Wi-Fi gratuit. Chicinetă privată pentru confort extra. Un spațiu simplu, curat și practic, perfect pentru câteva zile de relaxare la Băile Figa."
-                    data-images="cameraDeFamilieCvatrupla1,cameraDeFamilieCvatrupla2,cameraDeFamilieCvatrupla3,cameraDeFamilieCvatrupla4,cameraDeFamilieCvatrupla5,cameraDeFamilieCvatruplaBaie1,cameraDeFamilieCvatruplaBaie2,cameraDeFamilieCvatruplaBaie3,cameraDeFamilieCvatruplaBaie4,cameraDeFamilieCvatruplaBaie6"
+                    data-room-features="TV cu ecran plat,Wi-Fi gratuit"
+                    data-room-desc="Camera de familie oferă aparat pentru prepararea ceaiului și cafelei, o zonă de relaxare, precum și o baie privată cu duș și uscător de păr. Oaspeții au la dispoziție o chicinetă complet utilată, dotată cu plită, frigider, ustensile de bucătărie și cuptor cu microunde. Camera de familie include și un grătar. Această cameră de familie dispune de terasă și oferă, de asemenea, intrare privată, pereți izolați fonic și TV cu ecran plat cu servicii de streaming. Unitatea de cazare include 3 paturi."
+                    data-images="PensiuneSuzanneBaileFiga/CameraDeFamilieCvatrupla/Dormitor1,PensiuneSuzanneBaileFiga/CameraDeFamilieCvatrupla/Dormitor2,PensiuneSuzanneBaileFiga/CameraDeFamilieCvatrupla/Dormitor3,PensiuneSuzanneBaileFiga/CameraDeFamilieCvatrupla/Dormitor4,PensiuneSuzanneBaileFiga/CameraDeFamilieCvatrupla/Baie1"
                   >
                     Vezi detalii →
                   </button>
@@ -179,9 +263,9 @@
               </div>
             </article>
 
-            <!-- 3) Cameră de familie cu balcon (AC) -->
+            <!-- 3) Cameră de familie cu balcon (folder: CameraDeFamilieCuBalcon) -->
             <article class="room">
-              <div class="room__media" data-img="PensiuneDeFamiliecuBalconDormitor1"></div>
+              <div class="room__media" data-img="PensiuneSuzanneBaileFiga/CameraDeFamilieCuBalcon/Dormitor1"></div>
 
               <div class="room__body">
                 <div class="room__top">
@@ -193,15 +277,13 @@
                 </div>
 
                 <p class="room__text">
-                  Cameră foarte cerută: balcon, lumină și aer de vacanță. Aer condiționat disponibil la acest tip.
+                  Cameră luminoasă, cu balcon și un vibe de vacanță. Perfectă dacă vrei aer, liniște și un plus de confort.
                 </p>
 
                 <div class="room__meta">
-                  <div class="room__badge">AC</div>
                   <div class="room__badge">Balcon</div>
-                  <div class="room__badge">16 m²</div>
-                  <div class="room__badge">Baie privată</div>
                   <div class="room__badge">Wi-Fi</div>
+                  <div class="room__badge">AC</div>
                 </div>
 
                 <div class="room__bottom">
@@ -209,13 +291,13 @@
                   <button
                     class="room__ctaBtn"
                     type="button"
-                    data-open-room="balcon"
+                    data-open-room="pensiune-balcon"
                     data-room-title="Cameră de familie cu balcon"
                     data-room-price="270 lei / noapte • extrasezon"
                     data-room-stock="2 camere disponibile"
-                    data-room-features="16 m²,1 pat dublu mare,1 canapea extensibilă,balcon,aer condiționat,baie privată,TV,frigider,Wi-Fi gratuit"
-                    data-room-desc="Cameră de familie cu balcon, ideală pentru un sejur relaxat. Dispune de pat dublu mare și canapea extensibilă, balcon, aer condiționat, baie privată cu duș, TV cu ecran plat, frigider și Wi-Fi gratuit. Camera e luminoasă și plăcută, perfectă dacă vrei aer, liniște și un plus de confort."
-                    data-images="PensiuneDeFamiliecuBalconDormitor1,PensiuneDeFamiliecuBalconDormitor2,PensiuneDeFamiliecuBalconDormitor3,PensiuneDeFamiliecuBalconDormitor4,PensiuneDeFamiliecuBalconBai1,PensiuneDeFamiliecuBalconBai2,PensiuneDeFamiliecuBalconBai3,PensiuneDeFamiliecuBalconBai4,PensiuneDeFamiliecuBalconBai5"
+                    data-room-features="Balcon,AC,TV,Wi-Fi gratuit"
+                    data-room-desc="Cameră de familie cu balcon — Oaspeții au la dispoziție o chicinetă bine utilată, dotată cu plită, frigider, ustensile de bucătărie și cuptor cu microunde. Camera de familie include și un grătar. Această cameră de familie cu aer condiționat este compusă dintr-un TV cu ecran plat cu servicii de streaming, o baie privată, precum și o terasă cu vedere la munte. Unitatea de cazare include 2 paturi."
+                    data-images="PensiuneSuzanneBaileFiga/CameraDeFamilieCuBalcon/Dormitor1,PensiuneSuzanneBaileFiga/CameraDeFamilieCuBalcon/Dormitor2,PensiuneSuzanneBaileFiga/CameraDeFamilieCuBalcon/Dormitor3,PensiuneSuzanneBaileFiga/CameraDeFamilieCuBalcon/Balcon,PensiuneSuzanneBaileFiga/CameraDeFamilieCuBalcon/Baie1,PensiuneSuzanneBaileFiga/CameraDeFamilieCuBalcon/Baie2,PensiuneSuzanneBaileFiga/CameraDeFamilieCuBalcon/Baie3,PensiuneSuzanneBaileFiga/CameraDeFamilieCuBalcon/Baie4"
                   >
                     Vezi detalii →
                   </button>
@@ -223,9 +305,9 @@
               </div>
             </article>
 
-            <!-- 4) Studio de familie -->
+            <!-- 4) Studio de familie (folder: StudioDeFamilie) -->
             <article class="room room--reverse">
-              <div class="room__media" data-img="pensiuneStudioDeFamilieLiving1"></div>
+              <div class="room__media" data-img="PensiuneSuzanneBaileFiga/StudioDeFamilie/Living2"></div>
 
               <div class="room__body">
                 <div class="room__top">
@@ -237,13 +319,12 @@
                 </div>
 
                 <p class="room__text">
-                  Mult spațiu, living + zonă de masă și bucătărie privată. Super pentru familii care vor “ca acasă”.
+                  Studio generos, cu living, bucătărie și zonă de masă. Alegerea potrivită pentru familii care vor spațiu și libertate.
                 </p>
 
                 <div class="room__meta">
-                  <div class="room__badge">36 m²</div>
-                  <div class="room__badge">Bucătărie privată</div>
-                  <div class="room__badge">Baie privată</div>
+                  <div class="room__badge">Bucătărie</div>
+                  <div class="room__badge">Living</div>
                   <div class="room__badge">Wi-Fi</div>
                 </div>
 
@@ -252,13 +333,13 @@
                   <button
                     class="room__ctaBtn"
                     type="button"
-                    data-open-room="studio"
+                    data-open-room="pensiune-studio"
                     data-room-title="Studio de familie"
                     data-room-price="370 lei / noapte • extrasezon"
                     data-room-stock="1 studio disponibil"
-                    data-room-features="36 m²,studio întreg,3 canapele extensibile,bucătărie privată,baie privată,TV,frigider,Wi-Fi gratuit,izolare fonică,terasă,grătar"
-                    data-room-desc="Studio de familie spațios, cu living și zonă de luat masa, perfect pentru un sejur mai lung. Include bucătărie privată utilată, baie privată, TV cu ecran plat, frigider și Wi-Fi gratuit. Studioul oferă 3 canapele extensibile, deci este ideal pentru familii sau grupuri care vor confort și libertate."
-                    data-images="pensiuneStudioDeFamilie1,pensiuneStudioDeFamilie2,pensiuneStudioDeFamilie3,pensiuneStudioDeFamilie4,pensiuneStudioDeFamilie6,pensiuneStudioDeFamilie7,pensiuneStudioDeFamilieLiving1,pensiuneStudioDeFamilieLiving2,pensiuneStudioDeFamilieLiving3,pensiuneStudioDeFamilieBucatarie1,pensiuneStudioDeFamilieBucatarie2,pensiuneStudioDeFamilieBucatarie3,pensiuneStudioDeFamilieBucatarie4,pensiuneStudioDeFamilieBucatarie5,pensiuneStudioDeFamilieBaie,pensiuneStudioDeFamilieBaie2,pensiuneStudioDeFamilieBaie3,pensiuneStudioDeFamilieBaie4,pensiuneStudioDeFamilieBaie5"
+                    data-room-features="Bucătărie,zonă de masă,living,baie privată,Wi-Fi gratuit"
+                    data-room-desc="Studio de familie — mai mult spațiu pentru sejururi mai lungi. Living, bucătărie și zonă de masă, plus baie privată. Oaspeții au la dispoziție o bucătărie complet utilată, dotată cu plită, frigider, ustensile de bucătărie și cuptor. Studioul include și un grătar. Acest studio dispune de un TV cu ecran plat cu servicii de streaming, o baie privată, precum și o terasă cu vedere la munte. Unitatea de cazare oferă 3 paturi."
+                    data-images="PensiuneSuzanneBaileFiga/StudioDeFamilie/Living1,PensiuneSuzanneBaileFiga/StudioDeFamilie/Living2,PensiuneSuzanneBaileFiga/StudioDeFamilie/Living3,PensiuneSuzanneBaileFiga/StudioDeFamilie/Living4,PensiuneSuzanneBaileFiga/StudioDeFamilie/Bucatarie1,PensiuneSuzanneBaileFiga/StudioDeFamilie/Bucatarie2,PensiuneSuzanneBaileFiga/StudioDeFamilie/Bucatarie3,PensiuneSuzanneBaileFiga/StudioDeFamilie/Bucatarie4,PensiuneSuzanneBaileFiga/StudioDeFamilie/Terasa1,PensiuneSuzanneBaileFiga/StudioDeFamilie/Terasa2,PensiuneSuzanneBaileFiga/StudioDeFamilie/Terasa3,PensiuneSuzanneBaileFiga/StudioDeFamilie/Terasa4,PensiuneSuzanneBaileFiga/StudioDeFamilie/Terasa5,PensiuneSuzanneBaileFiga/StudioDeFamilie/Baie1,PensiuneSuzanneBaileFiga/StudioDeFamilie/Baie2,PensiuneSuzanneBaileFiga/StudioDeFamilie/Baie3"
                   >
                     Vezi detalii →
                   </button>
@@ -266,9 +347,9 @@
               </div>
             </article>
 
-            <!-- 5) Suită Deluxe (AC) -->
+            <!-- 5) Suită Deluxe (folder: SuitaDeluxe) -->
             <article class="room">
-              <div class="room__media" data-img="PensiuneSuitaDeluxe1"></div>
+              <div class="room__media" data-img="PensiuneSuzanneBaileFiga/SuitaDeluxe/Living2"></div>
 
               <div class="room__body">
                 <div class="room__top">
@@ -280,14 +361,13 @@
                 </div>
 
                 <p class="room__text">
-                  Suită premium, spațioasă, cu aer condiționat. Perfectă pentru familii mari sau un sejur “wow”.
+                  Suită spațioasă, cu living și bucătărie, gândită pentru sejururi în familie sau grup. Confort, lumină și mult spațiu.
                 </p>
 
                 <div class="room__meta">
+                  <div class="room__badge">Bucătărie</div>
+                  <div class="room__badge">Living</div>
                   <div class="room__badge">AC</div>
-                  <div class="room__badge">50 m²</div>
-                  <div class="room__badge">Bucătărie privată</div>
-                  <div class="room__badge">Baie privată</div>
                   <div class="room__badge">Wi-Fi</div>
                 </div>
 
@@ -296,26 +376,23 @@
                   <button
                     class="room__ctaBtn"
                     type="button"
-                    data-open-room="suita"
+                    data-open-room="pensiune-suita"
                     data-room-title="Suită Deluxe"
                     data-room-price="550 lei / noapte • extrasezon"
                     data-room-stock="1 suită disponibilă"
-                    data-room-features="50 m²,aer condiționat,2 paturi suprapuse,1 pat dublu mare,3 canapele extensibile,bucătărie privată,baie privată,TV,frigider,Wi-Fi gratuit"
-                    data-room-desc="Suită Deluxe de familie, foarte spațioasă și confortabilă. Are aer condiționat, zonă de living și masă, bucătărie privată utilată și baie privată. Configurația este ideală pentru familii/grupuri: 2 paturi suprapuse, 3 canapele extensibile și 1 pat dublu mare. O alegere premium pentru un sejur cu adevărat relaxant."
-                    data-images="PensiuneSuitaDeluxe1,PensiuneSuitaDeluxe2,PensiuneSuitaDeluxe3,PensiuneSuitaDeluxe4,PensiuneSuitaDeluxeDormitor1,PensiuneSuitaDeluxeDormitor2,PensiuneSuitaDeluxeDormitor3,PensiuneSuitaDeluxeDormitor4,PensiuneSuitaDeluxeDormitor5,PensiuneSuitaDeluxeLiving1,PensiuneSuitaDeluxeLiving2,PensiuneSuitaDeluxeLiving3,PensiuneSuitaDeluxeLiving4,PensiuneSuitaDeluxeBucatarie1,PensiuneSuitaDeluxeBucatarie2,PensiuneSuitaDeluxeBucatarie3,PensiuneSuitaDeluxeBucatarie4,PensiuneSuitaDeluxeBaie1,PensiuneSuitaDeluxeBaie2,PensiuneSuitaDeluxeBaie3,PensiuneSuitaDeluxeBaie4,PensiuneSuitaDeluxeBaie5"
+                    data-room-features="Living,bucătărie,AC,Wi-Fi gratuit"
+                    data-room-desc="Suită Deluxe — varianta premium pentru familii sau grupuri. Living spațios, bucătărie și baie privată, într-un apartament confortabil și bine organizat. Camera de familie include o zonă de relaxare și o zonă de luat masa, precum și o baie privată cu duș și uscător de păr. Oaspeții au la dispoziție o bucătărie complet utilată, dotată cu plită, frigider, ustensile de bucătărie și cuptor. Camera de familie oferă și un grătar. Această cameră de familie spațioasă, cu aer condiționat, pune la dispoziție un TV cu ecran plat și servicii de streaming, intrare privată, pereți izolați fonic, aparat pentru ceai/cafea, precum și vedere la munte. Unitatea de cazare are 6 paturi."
+                    data-images="PensiuneSuzanneBaileFiga/SuitaDeluxe/Living1,PensiuneSuzanneBaileFiga/SuitaDeluxe/Living2,PensiuneSuzanneBaileFiga/SuitaDeluxe/Living3,PensiuneSuzanneBaileFiga/SuitaDeluxe/Living4,PensiuneSuzanneBaileFiga/SuitaDeluxe/Living5,PensiuneSuzanneBaileFiga/SuitaDeluxe/Bucatarie,PensiuneSuzanneBaileFiga/SuitaDeluxe/Bucatarie2,PensiuneSuzanneBaileFiga/SuitaDeluxe/Dormitor1,PensiuneSuzanneBaileFiga/SuitaDeluxe/Dormitor2,PensiuneSuzanneBaileFiga/SuitaDeluxe/Dormitor3,PensiuneSuzanneBaileFiga/SuitaDeluxe/Dormitor4,PensiuneSuzanneBaileFiga/SuitaDeluxe/Baie1,PensiuneSuzanneBaileFiga/SuitaDeluxe/Baie2,PensiuneSuzanneBaileFiga/SuitaDeluxe/Baie3"
                   >
                     Vezi detalii →
                   </button>
                 </div>
               </div>
             </article>
-
           </div>
 
           <div class="noteBar">
-            <p class="noteBar__text">
-              * Prețurile afișate sunt pentru extrasezon. În sezon pot varia.
-            </p>
+          
           </div>
         </div>
       </section>
@@ -327,18 +404,17 @@
             <h2 class="contactSimple__title">Contact</h2>
 
             <div class="contactSimple__phones">
-              <a class="contactSimple__phone" href="tel:+40748108143">0748 108 143</a>
               <a class="contactSimple__phone" href="tel:+40755604463">0755 604 463</a>
+              <a class="contactSimple__phone" href="tel:+40748108143">0748 108 143</a>
             </div>
 
             <div class="contactSimple__buttons">
-              <a class="chipBtn" href="https://wa.me/40748108143" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-              <a class="chipBtn" href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
-              <a class="chipBtn" href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
-              <a class="chipBtn" href="#" target="_blank" rel="noopener noreferrer">TikTok</a>
+              <a class="chipBtn" href="https://wa.me/40755 604 463" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              <a class="chipBtn" href="https://www.instagram.com/cazaresuzanne?igsh=MXh0eHEyYTVycHlrcA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a class="chipBtn" href="https://www.facebook.com/profile.php?id=61587376957999" target="_blank" rel="noopener noreferrer">Facebook</a>
+              <a class="chipBtn" href="https://www.tiktok.com/@suzanne_cazare?_r=1&_t=ZN-93gCoedaLOY" target="_blank" rel="noopener noreferrer">TikTok</a>
+              <a class="chipBtn" href="https://www.booking.com/hotel/ro/pensiunea-suzanne-baile-figa.ro.html?label=ro-ro-booking-desktop-LNohG83GXptcOuYmW1foQQS652796014449%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9051353%3Ali%3Adec%3Adm&gclid=Cj0KCQiAnJHMBhDAARIsABr7b85vSlmzUNE09jy8hUnjJD24ROsCAdfJ01oJnw57-wVFcYxNqZo8s8UaAnoSEALw_wcB&aid=2311236&ucfs=1&arphpl=1&checkin=2026-06-12&checkout=2026-06-13" target="_blank" rel="noopener noreferrer">Booking</a>
             </div>
-
-            
           </div>
         </div>
       </section>
@@ -378,7 +454,7 @@
 
               <div class="modal__actions">
                 <a class="btn btn--primary" href="#contact" data-modal-close>Sună pentru rezervare</a>
-                <a class="btn btn--ghost" href="tel:+40748108143">0748 108 143</a>
+                <a class="btn btn--ghost" href="tel:+40755604463">0755 604 463</a>
               </div>
             </div>
           </div>
@@ -389,11 +465,10 @@
     <footer class="footer">
       <div class="container footer__inner">
         <p>© <span id="year"></span> Suzanne Băile Figa</p>
-        <a class="footer__top" href="#top">Sus ↑</a>
       </div>
     </footer>
 
-    <!-- FIX: self-contained script (images + modal + scroll/keyboard) -->
+    <!-- Script: suportă subfoldere în /poze (chei cu /) -->
     <script>
       (function() {
         const yearEl = document.getElementById("year");
@@ -434,13 +509,20 @@
           if(!key) return null;
           if(cache.has(key)) return cache.get(key);
 
-          const candidates = [key];
+          const raw = String(key).trim();
+          const candidates = [raw];
 
-          // auto-fix: if key has no final digit, try + "1"
-          if(!/\d$/.test(key)) candidates.push(`${key}1`);
+          // dacă cineva pune accidental key fără index final, încearcă + "1"
+          if(!/\d$/.test(raw) && !raw.endsWith("/")) candidates.push(`${raw}1`);
 
-          const trimmed = String(key).trim();
-          if(trimmed !== key) candidates.push(trimmed);
+          // dacă a fost pusă extensie, încearcă să o folosească direct
+          const hasExt = /\.(jpg|jpeg|png|webp)$/i.test(raw);
+          if(hasExt) {
+            const direct = `./poze/${raw}`;
+            const ok = await imgExists(direct);
+            cache.set(key, ok ? direct : null);
+            return ok ? direct : null;
+          }
 
           for(const cand of candidates) {
             for(const ext of exts) {
@@ -468,7 +550,7 @@
 
         hydrateDataImages();
 
-        // ===== ROOM MODAL (Booking-style) =====
+        // ===== MODAL =====
         const modal = document.getElementById("roomModal");
         if(!modal) return;
 
@@ -587,13 +669,10 @@
         }
 
         const closers = Array.from(modal.querySelectorAll("[data-modal-close]"));
-        for(const c of closers) {
-          c.addEventListener("click", closeModal);
-        }
+        for(const c of closers) c.addEventListener("click", closeModal);
 
         document.addEventListener("keydown", (e) => {
           if(!modal.classList.contains("is-open")) return;
-
           if(e.key === "Escape") closeModal();
           if(e.key === "ArrowRight") next();
           if(e.key === "ArrowLeft") prev();
