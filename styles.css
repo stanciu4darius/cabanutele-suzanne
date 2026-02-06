@@ -2058,23 +2058,18 @@ input::placeholder, textarea::placeholder{
   display: block;
 }
 
+@media (max-width: 900px) {
+  .hero,
+  .hero * {
+    pointer-events: none;
+  }
 
-/* Header peste orice (mai ales pe mobil) */
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 9999;
+  .header,
+  .header * {
+    pointer-events: auto;
+  }
 }
 
-/* Butonul hamburger să fie clickabil garantat */
-.nav__toggle {
-  position: relative;
-  z-index: 10000;
-}
 
-/* Orice layer din hero să nu “fure” tap-ul */
-.hero__bg,
-.hero__overlay,
-.hero__dots {
-  pointer-events: none;
-}
+
+
